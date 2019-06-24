@@ -1836,3 +1836,21 @@ Blockly.Blocks['robActions_eval_expr'] = {
 		this.setOutput(true, type);
 	}
 };
+
+Blockly.Blocks['robActions_image'] = {
+	init : function() {
+		this.setColour(Blockly.CAT_ACTION_RGB);
+		var ports = getConfigPorts('image');
+		this.dependConfig = {
+			'type' : 'image',
+			'dropDown' : ports
+		};
+		this.appendDummyInput().appendField(Blockly.Msg.SHOW_IMAGE)
+			.appendField(ports, 'ACTORPORT');
+		this.setPreviousStatement(true);
+		this.setNextStatement(true);
+		this.setMutatorPlus(new Blockly.MutatorPlus(this));
+		//this.setMutatorPlus(new Blockly.MutatorPlus([ 'robActions_image' ]));
+		this.setTooltip(Blockly.Msg.LED_OFF_TOOLTIP);
+	}
+};

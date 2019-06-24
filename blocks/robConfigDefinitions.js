@@ -598,12 +598,24 @@ confBlocks.plotting.sensebox = {
     sensor : false
 };
 
+confBlocks.image = {}
+confBlocks.image.sensebox = {
+    title : 'IMAGE',
+    inputs : [ [ 'IMAGE_FILENAME', 'FILE.PNG' ] ],
+    sensor : false
+};
+
+
+
 function initConfBlocks() {
     for ( var confBlock in confBlocks) {
         if (confBlocks.hasOwnProperty(confBlock)) {
             Blockly.Blocks['robConf_' + confBlock] = {
                 confBlock : confBlock,
                 init : function() {
+                    //console.log(confBlocks);
+                    //console.log(this.confBlock);
+                    //console.log(this.workspace.device);
                     Blockly.Blocks['robConf_generic'].init.call(this, confBlocks[this.confBlock][this.workspace.device]);
                 }
             };

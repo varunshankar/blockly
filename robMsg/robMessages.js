@@ -1307,3 +1307,5 @@ Blockly.Msg.YEND = 'end of Y axis';
 Blockly.Msg.XTICK = 'distance between X ticks';
 Blockly.Msg.YTICK = 'distance between Y ticks';
 Blockly.Msg.ACTION_PLOT_TICKMARK = 'at tickmark';
+Blockly.Msg.ACTION_IMAGE = 'Image';
+Blockly.Msg.SHOW_IMAGE = 'Show Picture';

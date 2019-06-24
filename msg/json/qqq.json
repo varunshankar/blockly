@@ -1525,5 +1525,7 @@
 	"YEND": "",
 	"XTICK": "",
 	"YTICK": "",
-	"ACTION_PLOT_TICKMARK": ""
+	"ACTION_PLOT_TICKMARK": "",
+	"ACTION_IMAGE": "",
+	"SHOW_IMAGE": ""
 }

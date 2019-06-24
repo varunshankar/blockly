@@ -114,7 +114,7 @@ def main():
     transform(results, synonyms, description, infile)
     infile.close()
     with open(args.robInput_file, 'r') as fin:
-        print fin.read()
+        print(fin.read())
 
   # Create <lang_file>.json, keys.json, and qqq.json.
   write_files(args.author, args.lang, args.output_dir, results, False)
