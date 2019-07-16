@@ -47,9 +47,6 @@ Blockly.Blocks['robConf_generic'] = {
         };
 
         var type = confBlock.sensor ? 'SENSOR_' : 'ACTION_';
-        console.log(type + confBlock.title);
-        console.log(Blockly.Msg[type + confBlock.title]);
-        console.log(Blockly.Msg);
         var name = Blockly.RobConfig.findLegalName(Blockly.Msg[type + confBlock.title].charAt(0).toUpperCase() || Blockly.Msg[type + confBlock.title]
                 || Blockly.checkMsgKey('CONFIGURATION_PORT'), this);
         this.nameOld = name;

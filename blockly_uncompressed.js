@@ -51,6 +51,7 @@ goog.addDependency("../../../" + dir + "/core/scrollbar.js", ['Blockly.Scrollbar
 goog.addDependency("../../../" + dir + "/core/field_pixelbox.js", ['Blockly.FieldPixelbox'], ['Blockly.FieldTextInput']);
 goog.addDependency("../../../" + dir + "/core/warning.js", ['Blockly.Warning'], ['Blockly.Bubble', 'Blockly.Icon']);
 goog.addDependency("../../../" + dir + "/core/field_note.js", ['Blockly.FieldNote'], ['Blockly.FieldTextInput', 'goog.math', 'goog.userAgent']);
+goog.addDependency("../../../" + dir + "/core/field_button.js", ['Blockly.FieldButton'], ['Blockly.Field', 'Blockly.Msg', 'goog.asserts', 'goog.dom', 'goog.userAgent']);
 goog.addDependency("../../../" + dir + "/core/msg.js", ['Blockly.Msg'], []);
 goog.addDependency("../../../" + dir + "/core/field_number.js", ['Blockly.FieldNumber'], ['Blockly.FieldTextInput']);
 goog.addDependency("../../../" + dir + "/core/bubble.js", ['Blockly.Bubble'], ['Blockly.Workspace', 'goog.dom', 'goog.math', 'goog.math.Coordinate', 'goog.userAgent']);
@@ -1739,6 +1740,7 @@ goog.require('Blockly.Error');
 goog.require('Blockly.Events');
 goog.require('Blockly.Field');
 goog.require('Blockly.FieldAngle');
+goog.require('Blockly.FieldButton');
 goog.require('Blockly.FieldCheckbox');
 goog.require('Blockly.FieldColour');
 goog.require('Blockly.FieldDate');

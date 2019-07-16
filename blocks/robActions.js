@@ -9,6 +9,7 @@ goog.provide('Blockly.Blocks.robActions');
 
 goog.require('Blockly.Blocks');
 goog.require('Blockly.Blocks.robConfigDefinitions');
+goog.require('Blockly.FieldButton');
 
 function getConfigPorts(actorName) {
 	var ports = [];
@@ -1838,19 +1839,169 @@ Blockly.Blocks['robActions_eval_expr'] = {
 };
 
 Blockly.Blocks['robActions_image'] = {
+	/**
+	 * Sets the chosen pin to the specified pull.
+	 *
+	 * @constructs robActions_pin_set_pull
+	 * @this.Blockly.Block
+	 * @param {String/dropdown}
+	 *            available pins
+	 * @returns immediately
+	 * @memberof Block
+	 */
+
 	init : function() {
 		this.setColour(Blockly.CAT_ACTION_RGB);
-		var ports = getConfigPorts('image');
-		this.dependConfig = {
-			'type' : 'image',
-			'dropDown' : ports
-		};
-		this.appendDummyInput().appendField(Blockly.Msg.SHOW_IMAGE)
-			.appendField(ports, 'ACTORPORT');
+		this.INCREMENT = 1;
+		this.DECREMENT = -1;
 		this.setPreviousStatement(true);
 		this.setNextStatement(true);
-		this.setMutatorPlus(new Blockly.MutatorPlus(this));
-		//this.setMutatorPlus(new Blockly.MutatorPlus([ 'robActions_image' ]));
 		this.setTooltip(Blockly.Msg.LED_OFF_TOOLTIP);
+		this.connectedAssetsCount = 1;
+		this.generateAssetInputs_(this.connectedAssetsCount);
+	},
+	getNames_ : function() {
+		console.log("IN GET NAMES");
+		var names = [];
+		var container = Blockly.Workspace.getByContainer("bricklyDiv");
+		console.log("ISCONTAINER"+container);
+		/*if (container) {
+			var blocks = Blockly.Workspace.getByContainer("bricklyDiv").getAllBlocks();
+			console.log("BL"+blocks.length);
+			for (var x = 0; x < blocks.length; x++) {
+				var func = blocks[x].getPhenomena;
+				if (func) {
+					var asset = func.call(blocks[x]);
+					for (var i = 0; i < asset.length; i++) {
+						if (asset[i] !== "") {
+							names.push([ asset[i], asset[i] ])
+						}
+					}
+				}
+			}
+		} */
+		if (names.length === 0) {
+			names.push([
+					Blockly.Msg.CONFIGURATION_NO_ASSET
+					|| Blockly.checkMsgKey('NO ASSET AVAILABLE'),
+					'NO_ASSET' ]);
+		}
+		return names;
+	},
+	setAsset : function(num, asset) {
+		var names = [];
+		for (var i = 0; i < asset.length; i++) {
+			if (asset[i] !== "") {
+				names.push([ asset[i], asset[i] ])
+			}
+		}
+		if (names.length === 0) {
+			names
+				.push([
+					Blockly.Msg.CONFIGURATION_NO_ASSET
+					|| Blockly
+						.checkMsgKey('NO ASSET AVAILABLE'),
+					'NO_ASSET' ]);
+		}
+		console.log("SENSECOUNT"+this.connectedAssetsCount);
+		for (var i = 0; i < this.connectedAssetsCount; i++) {
+			var dropDown = this.getField('ASSET' + i);
+			var value = dropDown.getValue();
+			var x = 0;
+			console.log("DDMG_LENGTH"+dropDown.menuGenerator_.length);
+			for (x = 0; x < dropDown.menuGenerator_.length; x++) {
+				if (!names[x]) {
+					if (dropDown.menuGenerator_[x][0] === value) {
+						dropDown.menuGenerator_.splice(x, 1);
+						dropDown.setValue(dropDown.menuGenerator_[0][0]);
+					} else {
+						dropDown.menuGenerator_.splice(x, 1);
+					}
+					break;
+				}
+				if (dropDown.menuGenerator_[x][0] !== names[x][0]) {
+					if (dropDown.menuGenerator_[x][0] === value) {
+						dropDown.menuGenerator_[x] = names[x];
+						dropDown.setValue(dropDown.menuGenerator_[x][0]);
+					} else {
+						dropDown.menuGenerator_[x] = names[x];
+					}
+					break;
+				}
+			}
+			if (names[dropDown.menuGenerator_.length]) {
+				dropDown.menuGenerator_.push(names[dropDown.menuGenerator_.length]);
+			}
+		}
+		if (names.length > 1) {
+			console.log("NAMES_GREATER_THAN_1");
+			dropDown.arrow_
+				.replaceChild(
+					document
+						.createTextNode(dropDown.sourceBlock_.RTL ? Blockly.FieldDropdown.ARROW_CHAR
+							+ ' '
+							: ' '
+							+ Blockly.FieldDropdown.ARROW_CHAR),
+					dropDown.arrow_.childNodes[0]);
+
+		} else {
+			dropDown.arrow_.replaceChild(document.createTextNode(""),
+				dropDown.arrow_.childNodes[0]);
+		}
+		this.render();
+	},
+	generateAssetInputs_ : function(numberOfAssetInputs) {
+		console.log(numberOfAssetInputs);
+		for (var i = 0; i < numberOfAssetInputs; i++) {
+			this.removeInput('ADD' + i);
+		}
+		for (var i = 0; i < numberOfAssetInputs; i++) {
+			console.log(numberOfAssetInputs);
+			this.appendAssetInput_(i, new Blockly.FieldDropdown(this.getNames_()));
+		}
+	},
+	appendAssetInput_ : function(inputNumber, assetDropdown) {
+		this.appendValueInput('ADD' + inputNumber)
+			.setAlign(Blockly.ALIGN_RIGHT).setCheck('Number').appendField(
+			Blockly.Msg.SHOW_IMAGE).appendField(
+			assetDropdown, 'ASSET' + inputNumber);
+	}
+};
+
+
+Blockly.Blocks['stl_import'] = {
+	init: function() {
+		this.category = 'PRIMITIVE_CSG'
+		this.appendDummyInput()
+			.appendField("STL Import");
+		this.appendDummyInput('')
+			.setAlign(Blockly.ALIGN_RIGHT)
+			.appendField(new Blockly.FieldLabel(""),'STL_FILENAME');
+		this.appendDummyInput('')
+			.setAlign(Blockly.ALIGN_RIGHT)
+			.appendField(new Blockly.FieldButton("Browse"),'STL_BUTTON');
+		this.appendDummyInput('C')
+			.appendField(new Blockly.FieldLabel(""),'STL_CONTENTS')
+			.setVisible(false);
+		this.setInputsInline(true);
+		this.setPreviousStatement(true);
+		this.setTooltip('');
+		this.setWarningText('STL files are not saved with your blocks.');
+		this.setHelpUrl('http://www.example.com/');
+	},
+	onchange: function() {
+		if (!this.workspace) {
+			// Block has been deleted.
+			return;
+		}
+		// if one of the value fields is missing, I want to pop up a warning.
+		var fn = this.getField('STL_FILENAME').getText();
+		var contents = this.getField('STL_CONTENTS').getText();
+		if (fn.length > 0) {
+			this.getField('STL_BUTTON').setVisible(false);
+			this.setCommentText(fn + '\ncenter: (' + Blockscad.csg_center[contents] + ')');
+		}
+		this.getField('STL_CONTENTS').setVisible(false);
+		// this.render();
 	}
 };

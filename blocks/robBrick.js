@@ -746,3 +746,131 @@ Blockly.Blocks['robBrick_actor'] = {
         this.setTooltip(Blockly.Msg.ACTOR_TOOLTIP);
     }
 };
+
+var getAsset_glb = function(){
+    var asset = [];
+    for (var x = 1; x <= this.idCount_; x++) {
+        asset.push(this.getField('NAME' + x).getValue());
+    }
+    return asset;
+}
+Blockly.Blocks['robBrick_ev3_image'] = {
+    /**
+     * ev3 image.
+     *
+     * @constructs robBrick_senseBox-Brick'
+     * @memberof Block
+     */
+
+    init : function() {
+        this.setColour('#BBBBBB');
+        this.setInputsInline(false);
+        this.appendDummyInput().appendField(new Blockly.FieldLabel('Image', 'brick_label'));
+        this.appendDummyInput('ADD1').appendField("NAME_ATTR1").appendField(new Blockly.FieldTextInput(this.findLegalName_("IMG1"),
+            this.nameValidator), 'NAME1').appendField(new Blockly.FieldTextInput("", this.idValidator), 'IMG1').setAlign(Blockly.ALIGN_RIGHT);
+        this.idCount_ = 1;
+        this.setMutatorPlus(new Blockly.MutatorPlus(this));
+        this.setTooltip(Blockly.Msg.SENSEBOXBRICK_TOOLTIP);
+        this.setDeletable(false);
+    },
+    getAsset : function() {
+        return getAsset_glb.call(this);
+    },
+    nameValidator : function(name) {
+        var block = this.sourceBlock_;
+        name = name.replace(/[\s\xa0]+/g, '').replace(/^ | $/g, '');
+        // no name set -> invalid
+        if (name === '') {
+            block.updateSendData_(0);
+            return name;
+        }
+        if (!name.match(/^[a-zA-Z][a-zA-Z_$0-9]*$/))
+            return null;
+        block.updateSendData_(0);
+        return name;
+    },
+    idValidator : function(id) {
+        if (id === '')
+            return id;
+        if (!id.match(/^[a-fA-F0-9]{24}$/))
+            return null;
+        return id;
+    },
+    mutationToDom : function() {
+        var container = document.createElement('mutation');
+        container.setAttribute('items', this.idCount_);
+        return container;
+    },
+    domToMutation : function(xmlElement) {
+        this.idCount_ = parseInt(xmlElement.getAttribute('items'), 10);
+        for (var x = 2; x <= this.idCount_; x++) {
+            this.appendDummyInput('ADD' + x).appendField("NAME_ATTR1").appendField(new Blockly.FieldTextInput("", this.nameValidator), 'NAME'
+                + x).appendField(new Blockly.FieldTextInput("", this.idValidator), 'IMG' + x).setAlign(Blockly.ALIGN_RIGHT);
+        }
+        if (this.idCount_ >= 2) {
+            this.setMutatorMinus(new Blockly.MutatorMinus(this));
+        }
+    },
+    updateShape_ : function(num) {
+        if (num == 1) {
+            if (this.idCount_ == 1) {
+                this.setMutatorMinus(new Blockly.MutatorMinus(this));
+            }
+            this.idCount_++;
+            this.appendDummyInput('ADD' + this.idCount_).appendField("NAME_ATTR1").appendField(new Blockly.FieldTextInput(
+                this.findLegalName_("IMG" + this.idCount_), this.nameValidator), 'NAME' + this.idCount_).appendField(new Blockly.FieldTextInput(
+                "", this.idValidator), 'IMG' + this.idCount_).setAlign(Blockly.ALIGN_RIGHT);
+        } else if (num == -1) {
+            this.removeInput('ADD' + this.idCount_);
+            this.idCount_--;
+        }
+        if (this.idCount_ == 1) {
+            this.mutatorMinus.dispose();
+            this.mutatorMinus = null;
+        }
+        this.render();
+        this.updateSendData_(num);
+    },
+    updateSendData_ : function(num) {
+        var container = Blockly.Workspace.getByContainer("blocklyDiv");
+        if (container) {
+            var blocks = Blockly.Workspace.getByContainer("blocklyDiv").getAllBlocks();
+            for (var x = 0; x < blocks.length; x++) {
+                var func = blocks[x].setAsset;
+                if (func) {
+                    func.call(blocks[x], num, this.getAsset());
+                }
+            }
+        }
+    },
+    findLegalName_ : function(name) {
+        var that = this;
+        var isLegalName = function(name) {
+            for (var x = 0; x <= that.idCount_; x++) {
+                if (that.getField('NAME' + x) && that.getField('NAME' + x).getValue() === name) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        while (!isLegalName(name)) {
+            // Collision with another variable.
+            if (!r) {
+                name += '2';
+            } else {
+                name = r[1] + (parseInt(r[2], 10) + 1);
+            }
+        }
+        return name;
+    },
+    onchange : function(what) {
+        if (what.name) {
+            if (!what.name.startsWith("NAME") || (what.oldValue == what.newValue)) {
+                return;
+            }
+        } else {
+            return;
+        }
+        this.updateSendData_(0);
+    }
+};

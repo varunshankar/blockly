@@ -1,7 +1,7 @@
 {
 	"@metadata": {
 		"author": "Ellen Spertus <ellen.spertus@gmail.com>",
-		"lastupdated": "2019-06-24 17:51:21.231205",
+		"lastupdated": "2019-07-15 21:59:41.037967",
 		"locale": "en",
 		"messagedocumentation" : "qqq"
 	},
@@ -1533,5 +1533,7 @@
 	"YTICK": "distance between Y ticks",
 	"ACTION_PLOT_TICKMARK": "at tickmark",
 	"ACTION_IMAGE": "Image",
+	"IMAGE_NAME": "Name",
+	"CONFIGURATION_NO_ASSET": "no asset",
 	"SHOW_IMAGE": "Show Picture"
 }
