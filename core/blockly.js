@@ -59,7 +59,6 @@ goog.require('goog.color');
 goog.require('goog.userAgent');
 goog.require('Blockly.FieldButton');
 
-
 // Turn off debugging when compiled.
 var CLOSURE_DEFINES = {'goog.DEBUG': false};
 

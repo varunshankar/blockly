@@ -96,6 +96,7 @@ goog.addDependency("../../../" + dir + "/core/rob_configuration.js", ['Blockly.R
 goog.addDependency("../../../" + dir + "/core/field.js", ['Blockly.Field'], ['goog.asserts', 'goog.dom', 'goog.math.Size', 'goog.style', 'goog.userAgent']);
 goog.addDependency("../../../" + dir + "/core/error.js", ['Blockly.Error'], ['Blockly.Bubble', 'Blockly.Icon']);
 goog.addDependency("../../../" + dir + "/core/mutatorMinus.js", ['Blockly.MutatorMinus'], ['Blockly.Mutator', 'Blockly.Bubble', 'Blockly.Icon']);
+goog.addDependency("../../../" + dir + "/core/field_test.js", ['Blockly.FieldTest'], ['Blockly.DropDownDiv', 'Blockly.Field', 'Blockly.Msg', 'Blockly.utils', 'goog.math.Coordinate', 'goog.userAgent']);
 goog.addDependency("../../alltests.js", [], []);
 goog.addDependency("../../protractor.conf.js", [], []);
 goog.addDependency("../../browser_capabilities.js", [], []);
@@ -1752,6 +1753,7 @@ goog.require('Blockly.FieldLabel');
 goog.require('Blockly.FieldNote');
 goog.require('Blockly.FieldNumber');
 goog.require('Blockly.FieldPixelbox');
+goog.require('Blockly.FieldTest');
 goog.require('Blockly.FieldTextInput');
 goog.require('Blockly.FieldVariable');
 goog.require('Blockly.Flyout');

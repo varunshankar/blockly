@@ -108,3 +108,5 @@ Blockly.FieldButton.prototype.widgetDispose_ = function() {
         Blockly.WidgetDiv.DIV.style.width = 'auto';
     };
 };
+
+Blockly.Field.register('field_button', Blockly.FieldButton);
