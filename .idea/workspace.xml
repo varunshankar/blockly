@@ -2,20 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09c7f7eb-3223-467a-8188-cc79790df690" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/core/field_button.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blockly_compressed.js" beforeDir="false" afterPath="$PROJECT_DIR$/blockly_compressed.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blockly_uncompressed.js" beforeDir="false" afterPath="$PROJECT_DIR$/blockly_uncompressed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/robActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/robActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/robBrick.js" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/robBrick.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/robConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/robConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/robConfigDefinitions.js" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/robConfigDefinitions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks_compressed.js" beforeDir="false" afterPath="$PROJECT_DIR$/blocks_compressed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/blockly.js" beforeDir="false" afterPath="$PROJECT_DIR$/core/blockly.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/msg/json/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/msg/json/en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/json/qqq.json" beforeDir="false" afterPath="$PROJECT_DIR$/msg/json/qqq.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/json/synonyms.json" beforeDir="false" afterPath="$PROJECT_DIR$/msg/json/synonyms.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robMsg/robMessages.js" beforeDir="false" afterPath="$PROJECT_DIR$/robMsg/robMessages.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/programConfiguration_playground_sensebox.html" beforeDir="false" afterPath="$PROJECT_DIR$/tests/programConfiguration_playground_sensebox.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/sensebox_playground.html" beforeDir="false" afterPath="$PROJECT_DIR$/tests/sensebox_playground.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,7 +18,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blocks/robActions.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
@@ -74,13 +64,27 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/field_button.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="30">
+              <caret line="2" column="33" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="33" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/core/blockly.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="59" column="33" selection-start-line="59" selection-start-column="33" selection-end-line="59" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/blocks.js">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -115,10 +119,11 @@
         <option value="$PROJECT_DIR$/blocks/FieldButton.js" />
         <option value="$PROJECT_DIR$/tests/programConfiguration_playground_sensebox.html" />
         <option value="$PROJECT_DIR$/blocks/robActions.js" />
+        <option value="$PROJECT_DIR$/core/blockly.js" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="67" />
     <option name="y" value="27" />
     <option name="width" value="650" />
@@ -193,15 +198,15 @@
       <updated>1562525852257</updated>
       <workItem from="1562525859640" duration="648000" />
       <workItem from="1562611602221" duration="1387000" />
-      <workItem from="1563218430030" duration="3513000" />
+      <workItem from="1563218430030" duration="3723000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5548000" />
+    <option name="totallyTimeSpent" value="5758000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1299" height="743" extended-state="7" />
+    <frame x="67" y="25" width="1299" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2633229" />
@@ -237,21 +242,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/blocks.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/field.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-90" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/block.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="571" column="3" selection-start-line="571" selection-start-column="3" selection-end-line="571" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/programConfiguration_playground_sensebox.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="262">
@@ -281,16 +271,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/field_button.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blocks/robBrick.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -302,6 +282,38 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/field.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-90" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/block.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="571" column="3" selection-start-line="571" selection-start-column="3" selection-end-line="571" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/blocks.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/field_button.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="33" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="33" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/blockly.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="59" column="33" selection-start-line="59" selection-start-column="33" selection-end-line="59" selection-end-column="33" />
         </state>
       </provider>
     </entry>
