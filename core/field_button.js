@@ -21,7 +21,7 @@ goog.require('goog.userAgent');
  */
 Blockly.FieldButton = function(text, opt_changeHandler) {
     Blockly.FieldButton.superClass_.constructor.call(this, text);
-    this.setChangeHandler(opt_changeHandler);
+    this.setValidator(opt_changeHandler);
 };
 goog.inherits(Blockly.FieldButton, Blockly.Field);
 
@@ -52,8 +52,8 @@ Blockly.FieldButton.prototype.setText = function(text) {
         // No change if null.
         return;
     }
-    if (this.sourceBlock_ && this.changeHandler_) {
-        var validated = this.changeHandler_(text);
+    if (this.sourceBlock_ && this.validator_) {
+        var validated = this.validator_(text);
         // If the new text is invalid, validation returns null.
         // In this case we still want to display the illegal result.
         if (validated !== null && validated !== undefined) {
@@ -71,8 +71,12 @@ Blockly.FieldButton.prototype.setText = function(text) {
  */
 Blockly.FieldButton.prototype.showEditor_ = function(opt_quietInput) {
     // console.log("editor activated");
-    Blockscad.currentInterestingBlock = this.sourceBlock_;
-    $('#importStl').click();
+   // $('#importStl').click();
+    alert("Hello");
+    var input = document.createElement('input');
+    input.type = 'file';
+    input.click();
+    this.setText(input.files.length.toString());
 };
 
 /**
@@ -87,8 +91,8 @@ Blockly.FieldButton.prototype.widgetDispose_ = function() {
         var htmlInput = Blockly.FieldButton.htmlInput_;
         // Save the edit (if it validates).
         var text = htmlInput.value;
-        if (thisField.sourceBlock_ && thisField.changeHandler_) {
-            var text1 = thisField.changeHandler_(text);
+        if (thisField.sourceBlock_ && thisField.validator_) {
+            var text1 = thisField.validator_(text);
             if (text1 === null) {
                 // Invalid edit.
                 text = htmlInput.defaultValue;
@@ -109,4 +113,4 @@ Blockly.FieldButton.prototype.widgetDispose_ = function() {
     };
 };
 
-Blockly.Field.register('field_button', Blockly.FieldButton);
+//Blockly.Field.register('field_button', Blockly.FieldButton);

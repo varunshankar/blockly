@@ -9,7 +9,6 @@ goog.provide('Blockly.Blocks.robActions');
 
 goog.require('Blockly.Blocks');
 goog.require('Blockly.Blocks.robConfigDefinitions');
-goog.require('Blockly.FieldButton');
 
 function getConfigPorts(actorName) {
 	var ports = [];
@@ -1969,6 +1968,7 @@ Blockly.Blocks['robActions_image'] = {
 };
 
 
+/*
 Blockly.Blocks['stl_import'] = {
 	init: function() {
 		this.category = 'PRIMITIVE_CSG'
@@ -1988,6 +1988,7 @@ Blockly.Blocks['stl_import'] = {
 		this.setTooltip('');
 		this.setWarningText('STL files are not saved with your blocks.');
 		this.setHelpUrl('http://www.example.com/');
+
 	},
 	onchange: function() {
 		if (!this.workspace) {
@@ -2004,4 +2005,4 @@ Blockly.Blocks['stl_import'] = {
 		this.getField('STL_CONTENTS').setVisible(false);
 		// this.render();
 	}
-};
+}; */

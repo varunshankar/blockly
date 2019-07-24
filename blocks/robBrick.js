@@ -767,7 +767,7 @@ Blockly.Blocks['robBrick_ev3_image'] = {
         this.setInputsInline(false);
         this.appendDummyInput().appendField(new Blockly.FieldLabel('Image', 'brick_label'));
         this.appendDummyInput('ADD1').appendField("NAME_ATTR1").appendField(new Blockly.FieldTextInput(this.findLegalName_("IMG1"),
-            this.nameValidator), 'NAME1').appendField(new Blockly.FieldTextInput("", this.idValidator), 'IMG1').setAlign(Blockly.ALIGN_RIGHT);
+            this.nameValidator), 'NAME1').appendField(new Blockly.FieldButton("Upload Image"), 'IMG1').setAlign(Blockly.ALIGN_RIGHT);
         this.idCount_ = 1;
         this.setMutatorPlus(new Blockly.MutatorPlus(this));
         this.setTooltip(Blockly.Msg.SENSEBOXBRICK_TOOLTIP);
@@ -805,7 +805,7 @@ Blockly.Blocks['robBrick_ev3_image'] = {
         this.idCount_ = parseInt(xmlElement.getAttribute('items'), 10);
         for (var x = 2; x <= this.idCount_; x++) {
             this.appendDummyInput('ADD' + x).appendField("NAME_ATTR1").appendField(new Blockly.FieldTextInput("", this.nameValidator), 'NAME'
-                + x).appendField(new Blockly.FieldTextInput("", this.idValidator), 'IMG' + x).setAlign(Blockly.ALIGN_RIGHT);
+                + x).appendField(new Blockly.FieldButton("Upload Image"), 'IMG' + x).setAlign(Blockly.ALIGN_RIGHT);
         }
         if (this.idCount_ >= 2) {
             this.setMutatorMinus(new Blockly.MutatorMinus(this));
@@ -818,8 +818,8 @@ Blockly.Blocks['robBrick_ev3_image'] = {
             }
             this.idCount_++;
             this.appendDummyInput('ADD' + this.idCount_).appendField("NAME_ATTR1").appendField(new Blockly.FieldTextInput(
-                this.findLegalName_("IMG" + this.idCount_), this.nameValidator), 'NAME' + this.idCount_).appendField(new Blockly.FieldTextInput(
-                "", this.idValidator), 'IMG' + this.idCount_).setAlign(Blockly.ALIGN_RIGHT);
+                this.findLegalName_("IMG" + this.idCount_), this.nameValidator), 'NAME' + this.idCount_).appendField(new Blockly.FieldButton(
+                "Upload Image"), 'IMG' + this.idCount_).setAlign(Blockly.ALIGN_RIGHT);
         } else if (num == -1) {
             this.removeInput('ADD' + this.idCount_);
             this.idCount_--;
