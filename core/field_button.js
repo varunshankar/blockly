@@ -70,13 +70,12 @@ Blockly.FieldButton.prototype.setText = function(text) {
  * @private
  */
 Blockly.FieldButton.prototype.showEditor_ = function(opt_quietInput) {
-    // console.log("editor activated");
-   // $('#importStl').click();
-    alert("Hello");
     var input = document.createElement('input');
     input.type = 'file';
+    input.addEventListener("change", (evnt) =>{
+        this.setText(input.files[0].name);
+    });
     input.click();
-    this.setText(input.files.length.toString());
 };
 
 /**
