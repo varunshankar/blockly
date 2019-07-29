@@ -73,7 +73,17 @@ Blockly.FieldButton.prototype.showEditor_ = function(opt_quietInput) {
     var input = document.createElement('input');
     input.type = 'file';
     input.addEventListener("change", (evnt) =>{
-        this.setText(input.files[0].name);
+        var file = input.files[0];
+        this.setText(file.name);
+        this.setContent(file.name);
+        var reader = new FileReader();
+        reader.onload = function() {
+            var contents = reader.result;
+            alert(contents);
+            //this.setValue(contents);
+            this.setText(contents);
+        };
+        reader.readAsDataURL(file);
     });
     input.click();
 };
