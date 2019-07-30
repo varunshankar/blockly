@@ -19,9 +19,12 @@ goog.require('goog.userAgent');
  * @extends {Blockly.Field}
  * @constructor
  */
-Blockly.FieldButton = function(text, opt_changeHandler) {
-    Blockly.FieldButton.superClass_.constructor.call(this, text);
-    this.setValidator(opt_changeHandler);
+Blockly.FieldButton = function(text, opt_imageData, opt_validator) {
+    var value = {};
+    value.imageData = opt_imageData;
+    value.text = text;
+    Blockly.FieldButton.superClass_.constructor.call(this, value);
+    this.setValidator(opt_validator);
 };
 goog.inherits(Blockly.FieldButton, Blockly.Field);
 
@@ -75,6 +78,8 @@ Blockly.FieldButton.prototype.showEditor_ = function(opt_quietInput) {
     input.addEventListener("change", (evnt) =>{
         var file = input.files[0];
         this.setText(file.name);
+        alert(this.value_);
+        //this.value_.imageData = file.name;
         var reader = new FileReader();
         reader.onload = function() {
             var contents = reader.result;
@@ -83,6 +88,36 @@ Blockly.FieldButton.prototype.showEditor_ = function(opt_quietInput) {
         reader.readAsDataURL(file);
     });
     input.click();
+};
+
+// Saves the field's value to an XML node. Allows for custom serialization.
+Blockly.FieldButton.prototype.toXml = function(fieldElement) {
+    // The default implementation of this function creates a node that looks
+    // like this: (where value is returned by getValue())
+    // <field name="FIELDNAME">value</field>
+    // But this doesn't work for our field because it stores an /object/.
+
+    fieldElement.setAttribute('imageData', this.value_.imageData);
+    // The textContent usually contains whatever is closest to the field's
+    // 'value'. The textContent doesn't need to contain anything, but saving
+    // something to it does aid in readability.
+    fieldElement.textContent = this.value_.text;
+
+    // Always return the element!
+    return fieldElement;
+};
+
+// Sets the field's value based on an XML node. Allows for custom
+// de-serialization.
+Blockly.FieldButton.prototype.fromXml = function(fieldElement) {
+    // Because we had to do custom serialization for this field, we also need
+    // to do custom de-serialization.
+
+    var value = {};
+    value.imageData = fieldElement.getAttribute('imageData');
+    value.text = fieldElement.textContent;
+    // The end goal is to call this.setValue()
+    this.setValue(value);
 };
 
 /**

@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09c7f7eb-3223-467a-8188-cc79790df690" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/blockly_compressed.js" beforeDir="false" afterPath="$PROJECT_DIR$/blockly_compressed.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/field_button.js" beforeDir="false" afterPath="$PROJECT_DIR$/core/field_button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/json/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/msg/json/en.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,8 +29,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/field_button.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="34" column="46" lean-forward="true" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="46" />
+            <state relative-caret-position="345">
+              <caret line="77" column="47" lean-forward="true" selection-start-line="77" selection-start-column="47" selection-end-line="77" selection-end-column="47" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -48,8 +50,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/sensebox_playground.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="712">
-              <caret line="119" column="50" lean-forward="true" selection-start-line="119" selection-start-column="50" selection-end-line="119" selection-end-column="50" />
+            <state relative-caret-position="337">
+              <caret line="217" column="29" lean-forward="true" selection-start-line="217" selection-start-column="29" selection-end-line="217" selection-end-column="29" />
               <folding>
                 <element signature="e#2#8#0" expanded="true" />
                 <element signature="e#2#8#0" expanded="true" />
@@ -106,6 +108,7 @@
       <find>changeHandler</find>
       <find>showEditor_</find>
       <find>addEventListener</find>
+      <find>fromXml</find>
     </findStrings>
     <replaceStrings>
       <replace>FieldTest</replace>
@@ -133,7 +136,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="4">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="67" />
     <option name="y" value="25" />
     <option name="width" value="650" />
@@ -201,18 +204,18 @@
       <workItem from="1562611602221" duration="1387000" />
       <workItem from="1563218430030" duration="6953000" />
       <workItem from="1563485225509" duration="22055000" />
-      <workItem from="1564146746525" duration="12941000" />
+      <workItem from="1564146746525" duration="18060000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43984000" />
+    <option name="totallyTimeSpent" value="49103000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="650" height="743" extended-state="4" />
+    <frame x="67" y="25" width="1299" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.097288676" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12931034" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -312,13 +315,6 @@
     <entry file="file://$PROJECT_DIR$/core/blocks.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/field_expression.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="22" column="23" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blocks/robActions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="263">
@@ -364,10 +360,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/core/field_expression.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="22" column="23" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tests/sensebox_playground.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="712">
-          <caret line="119" column="50" lean-forward="true" selection-start-line="119" selection-start-column="50" selection-end-line="119" selection-end-column="50" />
+        <state relative-caret-position="337">
+          <caret line="217" column="29" lean-forward="true" selection-start-line="217" selection-start-column="29" selection-end-line="217" selection-end-column="29" />
           <folding>
             <element signature="e#2#8#0" expanded="true" />
             <element signature="e#2#8#0" expanded="true" />
@@ -377,8 +380,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/field_button.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="34" column="46" lean-forward="true" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="46" />
+        <state relative-caret-position="345">
+          <caret line="77" column="47" lean-forward="true" selection-start-line="77" selection-start-column="47" selection-end-line="77" selection-end-column="47" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
