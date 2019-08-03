@@ -1,5 +1,7 @@
 // lets try adding in a button, which will be a text element that when you click on it,
 // the "editor" is to do the file choose menu.
+'use strict';
+
 goog.provide('Blockly.FieldButton');
 
 goog.require('Blockly.Field');
@@ -12,7 +14,7 @@ goog.require('goog.userAgent');
 /**
  * Class for an editable text field.
  * @param {string} text The initial content of the field.
- * @param {Function=} opt_changeHandler An optional function that is called
+ * @param {Function=} opt_validator An optional function that is called
  *     to validate any constraints on what the user entered.  Takes the new
  *     text as an argument and returns either the accepted text, a replacement
  *     text, or null to abort the change.
@@ -20,10 +22,10 @@ goog.require('goog.userAgent');
  * @constructor
  */
 Blockly.FieldButton = function(text, opt_imageData, opt_validator) {
-    var value = {};
-    value.imageData = opt_imageData;
-    value.text = text;
-    Blockly.FieldButton.superClass_.constructor.call(this, value);
+    //var value = {};
+    //value.imageData = opt_imageData;
+    //value.text = text;
+    Blockly.FieldButton.superClass_.constructor.call(this, text);
     this.setValidator(opt_validator);
 };
 goog.inherits(Blockly.FieldButton, Blockly.Field);
@@ -78,12 +80,29 @@ Blockly.FieldButton.prototype.showEditor_ = function(opt_quietInput) {
     input.addEventListener("change", (evnt) =>{
         var file = input.files[0];
         this.setText(file.name);
-        alert(this.value_);
-        //this.value_.imageData = file.name;
+        var buttonText = this.getText();
         var reader = new FileReader();
         reader.onload = function() {
             var contents = reader.result;
-            alert(contents);
+            //alert(contents);
+            var container = Blockly.Workspace.getByContainer("blocklyDiv");
+            if (container) {
+                var blocks = Blockly.Workspace.getByContainer("blocklyDiv").getAllBlocks();
+                for (var x = 0; x < blocks.length; x++) {
+                    var func = blocks[x].getAsset;
+                    if (func) {
+                        for(var i = 1; i <= blocks[x].idCount_; i++)
+                        {   console.log(buttonText);
+                            console.log(blocks[x].getField("IMG" + i));
+                            if (buttonText === blocks[x].getFieldValue("IMG" + i))
+                            {   console.log(x + " is logged");
+                                blocks[x].setFieldValue(contents.toString(), "IMG_DATA" + i);
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
         };
         reader.readAsDataURL(file);
     });

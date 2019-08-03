@@ -79,6 +79,7 @@ goog.addDependency("../../../" + dir + "/core/comment.js", ['Blockly.Comment'], 
 goog.addDependency("../../../" + dir + "/core/field_angle.js", ['Blockly.FieldAngle'], ['Blockly.FieldTextInput', 'goog.math', 'goog.userAgent']);
 goog.addDependency("../../../" + dir + "/core/field_checkbox.js", ['Blockly.FieldCheckbox'], ['Blockly.Field']);
 goog.addDependency("../../../" + dir + "/core/blockly.js", ['Blockly'], ['Blockly.BlockSvg.render', 'Blockly.Events', 'Blockly.FieldAngle', 'Blockly.FieldNote', 'Blockly.FieldCheckbox', 'Blockly.FieldPixelbox', 'Blockly.FieldColour', 'Blockly.FieldDropdown', 'Blockly.FieldHidden', 'Blockly.FieldDropdownImage', 'Blockly.FieldImage', 'Blockly.FieldTextInput', 'Blockly.FieldNumber', 'Blockly.FieldVariable', 'Blockly.Generator', 'Blockly.Msg', 'Blockly.Procedures', 'Blockly.Toolbox', 'Blockly.WidgetDiv', 'Blockly.WorkspaceSvg', 'Blockly.constants', 'Blockly.reservedWords', 'Blockly.RobConfig', 'Blockly.inject', 'Blockly.utils', 'goog.color', 'goog.userAgent', 'Blockly.FieldButton']);
+goog.addDependency("../../../" + dir + "/core/field_turtle.js", ['CustomFields.FieldTurtle'], ['Blockly.Field', 'Blockly.utils', 'Blockly.utils.dom']);
 goog.addDependency("../../../" + dir + "/core/field_expression.js", ['Blockly.FieldExpression'], ['Blockly.Field', 'goog.dom', 'goog.events', 'goog.style', 'goog.ui.Menu', 'goog.ui.MenuItem', 'goog.userAgent']);
 goog.addDependency("../../../" + dir + "/core/block.js", ['Blockly.Block'], ['Blockly.Blocks', 'Blockly.Comment', 'Blockly.Connection', 'Blockly.Input', 'Blockly.Mutator', 'Blockly.MutatorPlus', 'Blockly.MutatorMinus', 'Blockly.Warning', 'Blockly.Error', 'Blockly.Workspace', 'Blockly.Xml', 'goog.array', 'goog.asserts', 'goog.math.Coordinate', 'goog.string']);
 goog.addDependency("../../../" + dir + "/core/connection.js", ['Blockly.Connection'], ['goog.asserts', 'goog.dom']);
@@ -1786,6 +1787,7 @@ goog.require('Blockly.constants');
 goog.require('Blockly.inject');
 goog.require('Blockly.reservedWords');
 goog.require('Blockly.utils');
+goog.require('CustomFields.FieldTurtle');
 
 delete this.BLOCKLY_DIR;
 delete this.BLOCKLY_BOOT;

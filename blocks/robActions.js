@@ -1967,8 +1967,20 @@ Blockly.Blocks['robActions_image'] = {
 	}
 };
 
-
 /*
+Blockly.Blocks['turtle_basic'] = {
+	init: function() {
+		this.appendDummyInput()
+			.appendField('simple turtle');
+		this.appendDummyInput()
+			.setAlign(Blockly.ALIGN_CENTRE)
+			.appendField(new CustomFields.FieldTurtle(), 'TURTLE');
+		this.setStyle('loop_blocks');
+		this.setCommentText('Demonstrates a turtle field with no validator.');
+	}
+};
+
+
 Blockly.Blocks['stl_import'] = {
 	init: function() {
 		this.category = 'PRIMITIVE_CSG'

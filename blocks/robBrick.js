@@ -753,7 +753,9 @@ var getAsset_glb = function(){
         asset.push(this.getField('NAME' + x).getValue());
     }
     return asset;
-}
+};
+
+
 Blockly.Blocks['robBrick_ev3_image'] = {
     /**
      * ev3 image.
@@ -765,9 +767,13 @@ Blockly.Blocks['robBrick_ev3_image'] = {
     init : function() {
         this.setColour('#BBBBBB');
         this.setInputsInline(false);
+        var blk = new Blockly.FieldTextInput(" ");
+        //blk.setVisible(false);
         this.appendDummyInput().appendField(new Blockly.FieldLabel('Image', 'brick_label'));
         this.appendDummyInput('ADD1').appendField("NAME_ATTR1").appendField(new Blockly.FieldTextInput(this.findLegalName_("IMG1"),
-            this.nameValidator), 'NAME1').appendField(new Blockly.FieldButton("Upload Image"), 'IMG1').setAlign(Blockly.ALIGN_RIGHT);
+            this.nameValidator), 'NAME1').appendField(new Blockly.FieldButton("Upload Image"), 'IMG1')
+            .setAlign(Blockly.ALIGN_RIGHT).appendField(blk, "IMG_DATA1");
+
         this.idCount_ = 1;
         this.setMutatorPlus(new Blockly.MutatorPlus(this));
         this.setTooltip(Blockly.Msg.SENSEBOXBRICK_TOOLTIP);
@@ -803,9 +809,11 @@ Blockly.Blocks['robBrick_ev3_image'] = {
     },
     domToMutation : function(xmlElement) {
         this.idCount_ = parseInt(xmlElement.getAttribute('items'), 10);
+        var blk = new Blockly.FieldTextInput(" ");
+        //blk.setVisible(false);
         for (var x = 2; x <= this.idCount_; x++) {
             this.appendDummyInput('ADD' + x).appendField("NAME_ATTR1").appendField(new Blockly.FieldTextInput("", this.nameValidator), 'NAME'
-                + x).appendField(new Blockly.FieldButton("Upload Image"), 'IMG' + x).setAlign(Blockly.ALIGN_RIGHT);
+                + x).appendField(new Blockly.FieldButton("Upload Image"), 'IMG' + x).setAlign(Blockly.ALIGN_RIGHT).appendField(blk, "IMG_DATA" + x);
         }
         if (this.idCount_ >= 2) {
             this.setMutatorMinus(new Blockly.MutatorMinus(this));
@@ -817,9 +825,11 @@ Blockly.Blocks['robBrick_ev3_image'] = {
                 this.setMutatorMinus(new Blockly.MutatorMinus(this));
             }
             this.idCount_++;
+            var blk = new Blockly.FieldTextInput(" ");
+            //blk.setVisible(false);
             this.appendDummyInput('ADD' + this.idCount_).appendField("NAME_ATTR1").appendField(new Blockly.FieldTextInput(
                 this.findLegalName_("IMG" + this.idCount_), this.nameValidator), 'NAME' + this.idCount_).appendField(new Blockly.FieldButton(
-                "Upload Image"), 'IMG' + this.idCount_).setAlign(Blockly.ALIGN_RIGHT);
+                "Upload Image"), 'IMG' + this.idCount_).setAlign(Blockly.ALIGN_RIGHT).appendField(blk, "IMG_DATA" + this.idCount_);
         } else if (num == -1) {
             this.removeInput('ADD' + this.idCount_);
             this.idCount_--;
