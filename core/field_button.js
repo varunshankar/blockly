@@ -21,10 +21,7 @@ goog.require('goog.userAgent');
  * @extends {Blockly.Field}
  * @constructor
  */
-Blockly.FieldButton = function(text, opt_imageData, opt_validator) {
-    //var value = {};
-    //value.imageData = opt_imageData;
-    //value.text = text;
+Blockly.FieldButton = function(text, opt_validator) {
     Blockly.FieldButton.superClass_.constructor.call(this, text);
     this.setValidator(opt_validator);
 };
@@ -85,9 +82,9 @@ Blockly.FieldButton.prototype.showEditor_ = function(opt_quietInput) {
         reader.onload = function() {
             var contents = reader.result;
             //alert(contents);
-            var container = Blockly.Workspace.getByContainer("blocklyDiv");
+            var container = Blockly.Workspace.getByContainer("bricklyDiv");
             if (container) {
-                var blocks = Blockly.Workspace.getByContainer("blocklyDiv").getAllBlocks();
+                var blocks = Blockly.Workspace.getByContainer("bricklyDiv").getAllBlocks();
                 for (var x = 0; x < blocks.length; x++) {
                     var func = blocks[x].getAsset;
                     if (func) {

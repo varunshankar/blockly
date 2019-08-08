@@ -42,6 +42,8 @@ Blockly.Blocks['robBrick_EV3-Brick'] = {
         } else {
             this.setTooltip(Blockly.Msg.NXTBRICK_TOOLTIP);
         }
+        this.appendValueInput('IMG').appendField('Image').setAlign(Blockly.ALIGN_RIGHT).setCheck('Image');
+        this.appendValueInput('SND').appendField('Sound').setAlign(Blockly.ALIGN_RIGHT);
         this.setDeletable(false);
     }
 };
@@ -765,8 +767,8 @@ Blockly.Blocks['robBrick_ev3_image'] = {
      */
 
     init : function() {
-        this.setColour('#BBBBBB');
-        this.setInputsInline(false);
+        this.setColour(Blockly.CAT_IMAGE_RGB);
+        this.setOutput(true, "Image");
         var blk = new Blockly.FieldTextInput(" ");
         //blk.setVisible(false);
         this.appendDummyInput().appendField(new Blockly.FieldLabel('Image', 'brick_label'));
