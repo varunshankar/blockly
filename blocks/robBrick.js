@@ -767,7 +767,7 @@ Blockly.Blocks['robBrick_ev3_image'] = {
      */
 
     init : function() {
-        this.setColour(Blockly.CAT_IMAGE_RGB);
+        this.setColour(Blockly.CAT_CONTROL_RGB);
         this.setOutput(true, "Image");
         var blk = new Blockly.FieldTextInput(" ");
         //blk.setVisible(false);
@@ -779,7 +779,6 @@ Blockly.Blocks['robBrick_ev3_image'] = {
         this.idCount_ = 1;
         this.setMutatorPlus(new Blockly.MutatorPlus(this));
         this.setTooltip(Blockly.Msg.SENSEBOXBRICK_TOOLTIP);
-        this.setDeletable(false);
     },
     getAsset : function() {
         return getAsset_glb.call(this);

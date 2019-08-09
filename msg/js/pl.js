@@ -1429,6 +1429,7 @@ Blockly.Msg.TO = "to";  // untranslated
 Blockly.Msg.TODAY = "Dzisiaj";
 Blockly.Msg.TOOLBOX_ACTION = "Działania";
 Blockly.Msg.TOOLBOX_ANIMATION = "Animacja";
+Blockly.Msg.TOOLBOX_ASSET = "Asset";  // untranslated
 Blockly.Msg.TOOLBOX_CLEANING = "Cleaning";  // untranslated
 Blockly.Msg.TOOLBOX_COLOUR = "Kolory";
 Blockly.Msg.TOOLBOX_COMMUNICATION = "Wiadomości";

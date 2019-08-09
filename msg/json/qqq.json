@@ -1529,5 +1529,6 @@
 	"ACTION_IMAGE": "",
 	"IMAGE_NAME": "",
 	"CONFIGURATION_NO_ASSET": "",
-	"SHOW_IMAGE": ""
+	"SHOW_IMAGE": "",
+	"TOOLBOX_ASSET": ""
 }

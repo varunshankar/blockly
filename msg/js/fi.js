@@ -1429,6 +1429,7 @@ Blockly.Msg.TO = "to";  // untranslated
 Blockly.Msg.TODAY = "Tänään";
 Blockly.Msg.TOOLBOX_ACTION = "Toiminta";
 Blockly.Msg.TOOLBOX_ANIMATION = "Animation";  // untranslated
+Blockly.Msg.TOOLBOX_ASSET = "Asset";  // untranslated
 Blockly.Msg.TOOLBOX_CLEANING = "Cleaning";  // untranslated
 Blockly.Msg.TOOLBOX_COLOUR = "Värit";
 Blockly.Msg.TOOLBOX_COMMUNICATION = "Viestintä";

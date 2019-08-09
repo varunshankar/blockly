@@ -1850,7 +1850,7 @@ Blockly.Blocks['robActions_image'] = {
 	 */
 
 	init : function() {
-		this.setColour(Blockly.CAT_ACTION_RGB);
+		this.setColour(Blockly.CAT_CONTROL_RGB);
 		this.INCREMENT = 1;
 		this.DECREMENT = -1;
 		this.setPreviousStatement(true);
@@ -1966,55 +1966,3 @@ Blockly.Blocks['robActions_image'] = {
 			assetDropdown, 'ASSET' + inputNumber);
 	}
 };
-
-/*
-Blockly.Blocks['turtle_basic'] = {
-	init: function() {
-		this.appendDummyInput()
-			.appendField('simple turtle');
-		this.appendDummyInput()
-			.setAlign(Blockly.ALIGN_CENTRE)
-			.appendField(new CustomFields.FieldTurtle(), 'TURTLE');
-		this.setStyle('loop_blocks');
-		this.setCommentText('Demonstrates a turtle field with no validator.');
-	}
-};
-
-
-Blockly.Blocks['stl_import'] = {
-	init: function() {
-		this.category = 'PRIMITIVE_CSG'
-		this.appendDummyInput()
-			.appendField("STL Import");
-		this.appendDummyInput('')
-			.setAlign(Blockly.ALIGN_RIGHT)
-			.appendField(new Blockly.FieldLabel(""),'STL_FILENAME');
-		this.appendDummyInput('')
-			.setAlign(Blockly.ALIGN_RIGHT)
-			.appendField(new Blockly.FieldButton("Browse"),'STL_BUTTON');
-		this.appendDummyInput('C')
-			.appendField(new Blockly.FieldLabel(""),'STL_CONTENTS')
-			.setVisible(false);
-		this.setInputsInline(true);
-		this.setPreviousStatement(true);
-		this.setTooltip('');
-		this.setWarningText('STL files are not saved with your blocks.');
-		this.setHelpUrl('http://www.example.com/');
-
-	},
-	onchange: function() {
-		if (!this.workspace) {
-			// Block has been deleted.
-			return;
-		}
-		// if one of the value fields is missing, I want to pop up a warning.
-		var fn = this.getField('STL_FILENAME').getText();
-		var contents = this.getField('STL_CONTENTS').getText();
-		if (fn.length > 0) {
-			this.getField('STL_BUTTON').setVisible(false);
-			this.setCommentText(fn + '\ncenter: (' + Blockscad.csg_center[contents] + ')');
-		}
-		this.getField('STL_CONTENTS').setVisible(false);
-		// this.render();
-	}
-}; */

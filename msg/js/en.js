@@ -1429,6 +1429,7 @@ Blockly.Msg.TO = "to";
 Blockly.Msg.TODAY = "Today";
 Blockly.Msg.TOOLBOX_ACTION = "Action";
 Blockly.Msg.TOOLBOX_ANIMATION = "Animation";
+Blockly.Msg.TOOLBOX_ASSET = "Asset";
 Blockly.Msg.TOOLBOX_CLEANING = "Cleaning";
 Blockly.Msg.TOOLBOX_COLOUR = "Colours";
 Blockly.Msg.TOOLBOX_COMMUNICATION = "Messages";

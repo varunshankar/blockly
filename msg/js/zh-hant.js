@@ -1429,6 +1429,7 @@ Blockly.Msg.TO = "to";  // untranslated
 Blockly.Msg.TODAY = "今天";
 Blockly.Msg.TOOLBOX_ACTION = "動作";
 Blockly.Msg.TOOLBOX_ANIMATION = "動畫";
+Blockly.Msg.TOOLBOX_ASSET = "Asset";  // untranslated
 Blockly.Msg.TOOLBOX_CLEANING = "清除";
 Blockly.Msg.TOOLBOX_COLOUR = "顏色";
 Blockly.Msg.TOOLBOX_COMMUNICATION = "消息";
