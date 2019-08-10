@@ -2,73 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09c7f7eb-3223-467a-8188-cc79790df690" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/blocks/robActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/robActions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blocks/robBrick.js" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/robBrick.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks_compressed.js" beforeDir="false" afterPath="$PROJECT_DIR$/blocks_compressed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/ar.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/ar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/az.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/az.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/ba.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/ba.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/bcc.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/bcc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/be-tarask.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/be-tarask.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/bg.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/bg.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/bn.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/bn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/br.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/br.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/ca.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/ca.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/cs.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/cs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/da.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/da.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/de.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/de.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/el.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/el.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/en.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/es.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/es.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/fa.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/fa.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/fi.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/fi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/fr.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/fr.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/he.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/he.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/hi.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/hi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/hrx.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/hrx.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/hu.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/hu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/ia.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/ia.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/id.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/id.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/is.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/is.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/it.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/it.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/ja.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/ja.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/ko.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/ko.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/lb.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/lb.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/lki.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/lki.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/lrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/lrc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/lt.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/lt.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/mk.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/mk.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/ms.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/ms.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/nb.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/nb.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/nl.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/nl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/oc.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/oc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/pl.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/pl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/pms.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/pms.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/pt-br.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/pt-br.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/pt.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/pt.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/ro.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/ro.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/ru.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/ru.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/sc.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/sc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/sd.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/sd.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/shn.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/shn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/sk.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/sk.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/sl.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/sl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/sq.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/sq.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/sr.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/sr.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/sv.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/sv.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/ta.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/ta.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/tcy.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/tcy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/th.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/th.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/tl.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/tl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/tlh.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/tlh.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/tr.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/tr.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/uk.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/uk.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/vi.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/vi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/zh-hans.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/zh-hans.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/js/zh-hant.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/zh-hant.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/json/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/msg/json/en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msg/json/qqq.json" beforeDir="false" afterPath="$PROJECT_DIR$/msg/json/qqq.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robMsg/robMessages.js" beforeDir="false" afterPath="$PROJECT_DIR$/robMsg/robMessages.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -102,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/ev3_playground.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="72" column="31" lean-forward="true" selection-start-line="72" selection-start-column="31" selection-end-line="72" selection-end-column="31" />
+            <state relative-caret-position="330">
+              <caret line="79" column="30" selection-start-line="79" selection-start-column="30" selection-end-line="79" selection-end-column="30" />
               <folding>
                 <element signature="n#style#0;n#toolbox_set#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="e#2#8#0" expanded="true" />
@@ -116,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/blocks/robBrick.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
-              <caret line="780" column="59" selection-start-line="780" selection-start-column="59" selection-end-line="780" selection-end-column="59" />
+            <state relative-caret-position="298">
+              <caret line="45" column="35" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -268,15 +202,16 @@
       <workItem from="1564798116019" duration="12543000" />
       <workItem from="1565093890441" duration="3497000" />
       <workItem from="1565262228896" duration="2240000" />
-      <workItem from="1565277328507" duration="5654000" />
+      <workItem from="1565277328507" duration="6341000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87257000" />
+    <option name="totallyTimeSpent" value="87944000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23746082" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -495,18 +430,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/ev3_playground.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="72" column="31" lean-forward="true" selection-start-line="72" selection-start-column="31" selection-end-line="72" selection-end-column="31" />
-          <folding>
-            <element signature="n#style#0;n#toolbox_set#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#2#8#0" expanded="true" />
-            <element signature="e#2#8#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/field_button.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1365">
@@ -524,10 +447,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/ev3_playground.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="79" column="30" selection-start-line="79" selection-start-column="30" selection-end-line="79" selection-end-column="30" />
+          <folding>
+            <element signature="n#style#0;n#toolbox_set#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#2#8#0" expanded="true" />
+            <element signature="e#2#8#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/blocks/robBrick.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="780" column="59" selection-start-line="780" selection-start-column="59" selection-end-line="780" selection-end-column="59" />
+        <state relative-caret-position="298">
+          <caret line="45" column="35" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
         </state>
       </provider>
     </entry>

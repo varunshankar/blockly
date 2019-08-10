@@ -42,8 +42,8 @@ Blockly.Blocks['robBrick_EV3-Brick'] = {
         } else {
             this.setTooltip(Blockly.Msg.NXTBRICK_TOOLTIP);
         }
-        this.appendValueInput('IMG').appendField('Image').setAlign(Blockly.ALIGN_RIGHT).setCheck('Image');
-        this.appendValueInput('SND').appendField('Sound').setAlign(Blockly.ALIGN_RIGHT);
+        this.appendValueInput('AST_IMG').appendField('Image').setAlign(Blockly.ALIGN_RIGHT).setCheck('Image');
+        this.appendValueInput('AST_SND').appendField('Sound').setAlign(Blockly.ALIGN_RIGHT);
         this.setDeletable(false);
     }
 };
