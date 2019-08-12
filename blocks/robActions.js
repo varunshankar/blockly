@@ -1864,11 +1864,11 @@ Blockly.Blocks['robActions_image'] = {
 		var names = [];
 		var container = Blockly.Workspace.getByContainer("bricklyDiv");
 		console.log("ISCONTAINER"+container);
-		/*if (container) {
+		if (container) {
 			var blocks = Blockly.Workspace.getByContainer("bricklyDiv").getAllBlocks();
 			console.log("BL"+blocks.length);
 			for (var x = 0; x < blocks.length; x++) {
-				var func = blocks[x].getPhenomena;
+				var func = blocks[x].getAsset;
 				if (func) {
 					var asset = func.call(blocks[x]);
 					for (var i = 0; i < asset.length; i++) {
@@ -1878,7 +1878,7 @@ Blockly.Blocks['robActions_image'] = {
 					}
 				}
 			}
-		} */
+		}
 		if (names.length === 0) {
 			names.push([
 					Blockly.Msg.CONFIGURATION_NO_ASSET
