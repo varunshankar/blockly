@@ -746,18 +746,65 @@ Blockly.Blocks['robActions_display_picture_new'] = {
 
 	init : function() {
 		this.setColour(Blockly.CAT_ACTION_RGB);
-		var picture = new Blockly.FieldDropdown([
+		this.picture = [
 				[ Blockly.Msg.DISPLAY_PICTURE_GLASSES, 'OLDGLASSES' ],
 				[ Blockly.Msg.DISPLAY_PICTURE_EYES_OPEN, 'EYESOPEN' ],
 				[ Blockly.Msg.DISPLAY_PICTURE_EYES_CLOSED, 'EYESCLOSED' ],
 				[ Blockly.Msg.DISPLAY_PICTURE_FLOWERS, 'FLOWERS' ],
-				[ Blockly.Msg.DISPLAY_PICTURE_TACHO, 'TACHO' ] ]);
-		this.appendDummyInput().appendField(
-				Blockly.Msg.DISPLAY_SHOW + ' ' + Blockly.Msg.DISPLAY_PICTURE)
-				.appendField(picture, 'PICTURE');
+				[ Blockly.Msg.DISPLAY_PICTURE_TACHO, 'TACHO' ] ];
 		this.setPreviousStatement(true);
 		this.setNextStatement(true);
 		this.setTooltip(Blockly.Msg.DISPLAY_PICTURE_TOOLTIP);
+		this.generateAssetInputs_();
+	},
+	getNames_ : function() {
+		var names = [];
+		var container = Blockly.Workspace.getByContainer("bricklyDiv");
+		if (container) {
+			var blocks = Blockly.Workspace.getByContainer("bricklyDiv").getAllBlocks();
+			console.log("BL" + blocks.length);
+			for (var x = 0; x < blocks.length; x++) {
+				var func = blocks[x].getAsset;
+				if (func) {
+					var asset = func.call(blocks[x]);
+					for (var i = 0; i < asset.length; i++) {
+						if (asset[i] !== "") {
+							names.push([asset[i], asset[i]])
+						}
+					}
+				}
+			}
+		}
+		return names.concat(this.picture);
+	},
+	setAsset : function(num, asset) {
+		var dropDown = this.getField('PICTURE');
+		var oldDropDownvalue = dropDown.getValue();
+		var newAssets = this.generateAssetInputs_();
+		console.log("******START*********");
+		console.log(oldDropDownvalue);
+		console.log(newAssets);
+		for(var i = 0; i < newAssets.length; i++){
+			console.log(newAssets[i]);
+			console.log(newAssets[i][1]);
+			if(newAssets[i][1] === oldDropDownvalue){
+				this.setFieldValue(oldDropDownvalue, 'PICTURE');
+				console.log("------END--------");
+				break;
+			}
+		}
+		//this.render();
+	},
+	generateAssetInputs_ : function() {
+		this.removeInput('ADD');
+		var assetList = this.getNames_();
+		this.appendAssetInput_(new Blockly.FieldDropdown(assetList));
+		return assetList;
+	},
+	appendAssetInput_ : function(assetDropdown) {
+		this.appendDummyInput('ADD').appendField(
+			Blockly.Msg.DISPLAY_SHOW + ' ' + Blockly.Msg.DISPLAY_PICTURE).appendField(
+			assetDropdown, 'PICTURE');
 	}
 };
 
@@ -1862,10 +1909,10 @@ Blockly.Blocks['robActions_image'] = {
 	getNames_ : function() {
 		console.log("IN GET NAMES");
 		var names = [];
-		var container = Blockly.Workspace.getByContainer("bricklyDiv");
+		var container = Blockly.Workspace.getByContainer("blocklyDiv");
 		console.log("ISCONTAINER"+container);
 		if (container) {
-			var blocks = Blockly.Workspace.getByContainer("bricklyDiv").getAllBlocks();
+			var blocks = Blockly.Workspace.getByContainer("blocklyDiv").getAllBlocks();
 			console.log("BL"+blocks.length);
 			for (var x = 0; x < blocks.length; x++) {
 				var func = blocks[x].getAsset;
@@ -1960,9 +2007,8 @@ Blockly.Blocks['robActions_image'] = {
 		}
 	},
 	appendAssetInput_ : function(inputNumber, assetDropdown) {
-		this.appendValueInput('ADD' + inputNumber)
-			.setAlign(Blockly.ALIGN_RIGHT).setCheck('Number').appendField(
-			Blockly.Msg.SHOW_IMAGE).appendField(
+		this.appendDummyInput('ADD' + inputNumber).appendField(
+			Blockly.Msg.DISPLAY_SHOW + ' ' + Blockly.Msg.DISPLAY_PICTURE).appendField(
 			assetDropdown, 'ASSET' + inputNumber);
 	}
 };
