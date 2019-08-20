@@ -1292,6 +1292,16 @@ Blockly.Msg.CB_BOTH = 'Calli:bot both';
 Blockly.Msg.CB_ALL = 'Calli:bot all';
 Blockly.Msg.PORT_INTERNAL = 'Port internal';
 
+//Image block
+Blockly.Msg.ACTION_IMAGE = 'Image';
+Blockly.Msg.NAME = 'Name';
+Blockly.Msg.CONFIGURATION_NO_ASSET = 'no asset';
+Blockly.Msg.TOOLBOX_ASSET = 'Asset';
+Blockly.Msg.UPLOAD = 'Upload';
+Blockly.Msg.UPLOADER = 'Uploader';
+Blockly.Msg.EV3_IMAGE_BRICK_TOOLTIP = 'Represents the Image uploader of EV3 brick.';
+
+
 //untranslated:
 Blockly.Msg.ACTION_PLOTTING = 'plot';
 Blockly.Msg.ACTION_PLOT_POINT = 'plot a point';
@@ -1307,10 +1317,3 @@ Blockly.Msg.YEND = 'end of Y axis';
 Blockly.Msg.XTICK = 'distance between X ticks';
 Blockly.Msg.YTICK = 'distance between Y ticks';
 Blockly.Msg.ACTION_PLOT_TICKMARK = 'at tickmark';
-
-//Image block
-Blockly.Msg.ACTION_IMAGE = 'Image';
-Blockly.Msg.IMAGE_NAME = 'Name';
-Blockly.Msg.CONFIGURATION_NO_ASSET = 'no asset';
-Blockly.Msg.SHOW_IMAGE = 'Show Picture';
-Blockly.Msg.TOOLBOX_ASSET = 'Asset';

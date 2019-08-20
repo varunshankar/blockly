@@ -42,8 +42,8 @@ Blockly.Blocks['robBrick_EV3-Brick'] = {
         } else {
             this.setTooltip(Blockly.Msg.NXTBRICK_TOOLTIP);
         }
-        this.appendValueInput('AST_IMG').appendField('Image').setAlign(Blockly.ALIGN_RIGHT).setCheck('Image');
-        this.appendValueInput('AST_SND').appendField('Sound').setAlign(Blockly.ALIGN_RIGHT);
+        this.appendValueInput('AST_IMG').appendField(Blockly.Msg.TOOLBOX_IMAGE).setAlign(Blockly.ALIGN_RIGHT).setCheck('Picture');
+        this.appendValueInput('AST_SND').appendField('Sound').setAlign(Blockly.ALIGN_RIGHT).setCheck('Sound');
         this.setDeletable(false);
     }
 };
@@ -768,32 +768,57 @@ Blockly.Blocks['robBrick_ev3_image'] = {
 
     init : function() {
         this.setColour(Blockly.CAT_CONTROL_RGB);
-        this.setOutput(true, "Image");
+        this.setOutput(true, "Picture");
         var blk = new Blockly.FieldTextInput(" ");
-        //blk.setVisible(false);
-        this.appendDummyInput().appendField(new Blockly.FieldLabel('Image', 'brick_label'));
-        this.appendDummyInput('ADD1').appendField("NAME_ATTR1").appendField(new Blockly.FieldTextInput(this.findLegalName_("IMG1"),
-            this.nameValidator), 'NAME1').appendField(new Blockly.FieldButton("Upload Image"), 'IMG1')
+        blk.setVisible(false);
+        this.appendDummyInput()
+            .appendField(new Blockly.FieldLabel(Blockly.Msg.ACTION_IMAGE + " "+ Blockly.Msg.UPLOADER , 'brick_label'));
+        this.appendDummyInput('ADD1')
+            .appendField(Blockly.Msg.NAME)
+            .appendField(new Blockly.FieldTextInput(this.findLegalName_("IMG1"), this.nameValidator), 'NAME1')
+            .appendField(new Blockly.FieldButton(Blockly.Msg.UPLOAD + " " + Blockly.Msg.ACTION_IMAGE), 'IMG1')
             .setAlign(Blockly.ALIGN_RIGHT).appendField(blk, "IMG_DATA1");
 
         this.idCount_ = 1;
         this.setMutatorPlus(new Blockly.MutatorPlus(this));
-        this.setTooltip(Blockly.Msg.SENSEBOXBRICK_TOOLTIP);
+        this.setTooltip(Blockly.Msg.EV3_IMAGE_BRICK_TOOLTIP);
     },
     getAsset : function() {
         return getAsset_glb.call(this);
     },
     nameValidator : function(name) {
         var block = this.sourceBlock_;
+        console.log(this);
         name = name.replace(/[\s\xa0]+/g, '').replace(/^ | $/g, '');
         // no name set -> invalid
-        if (name === '') {
+        console.log("))))))))))***********(((((((((");
+        console.log("here" + name);
+        console.log(block.getAsset());
+        console.log(block.idCount_);
+        var images = block.getAsset();
+        var overlappedImageNames = images.filter(function(a){
+            return images.indexOf(a) !== images.lastIndexOf(a)
+        });
+
+        var predefinedImages = [
+             Blockly.Msg.DISPLAY_PICTURE_GLASSES,
+             Blockly.Msg.DISPLAY_PICTURE_EYES_OPEN,
+             Blockly.Msg.DISPLAY_PICTURE_EYES_CLOSED,
+             Blockly.Msg.DISPLAY_PICTURE_FLOWERS,
+             Blockly.Msg.DISPLAY_PICTURE_TACHO
+        ];
+        var x = this.name.replace("NAME", '');
+        console.log("INSIDE"+ x);
+        if(name === '' || overlappedImageNames.includes(name) || predefinedImages.includes(name)){
             block.updateSendData_(0);
-            return name;
+            return 'IMG' + x;
         }
+
+        console.log("END___________");
+        /*
         if (!name.match(/^[a-zA-Z][a-zA-Z_$0-9]*$/))
-            return null;
-        block.updateSendData_(0);
+            return null;*/
+        //block.updateSendData_(0);
         return name;
     },
     idValidator : function(id) {
@@ -811,10 +836,13 @@ Blockly.Blocks['robBrick_ev3_image'] = {
     domToMutation : function(xmlElement) {
         this.idCount_ = parseInt(xmlElement.getAttribute('items'), 10);
         var blk = new Blockly.FieldTextInput(" ");
-        //blk.setVisible(false);
+        blk.setVisible(false);
         for (var x = 2; x <= this.idCount_; x++) {
-            this.appendDummyInput('ADD' + x).appendField("NAME_ATTR1").appendField(new Blockly.FieldTextInput("", this.nameValidator), 'NAME'
-                + x).appendField(new Blockly.FieldButton("Upload Image"), 'IMG' + x).setAlign(Blockly.ALIGN_RIGHT).appendField(blk, "IMG_DATA" + x);
+            this.appendDummyInput('ADD' + x)
+                .appendField(Blockly.Msg.NAME)
+                .appendField(new Blockly.FieldTextInput("", this.nameValidator), 'NAME' + x)
+                .appendField(new Blockly.FieldButton(Blockly.Msg.UPLOAD + " " + Blockly.Msg.ACTION_IMAGE), 'IMG' + x)
+                .setAlign(Blockly.ALIGN_RIGHT).appendField(blk, "IMG_DATA" + x);
         }
         if (this.idCount_ >= 2) {
             this.setMutatorMinus(new Blockly.MutatorMinus(this));
@@ -827,10 +855,12 @@ Blockly.Blocks['robBrick_ev3_image'] = {
             }
             this.idCount_++;
             var blk = new Blockly.FieldTextInput(" ");
-            //blk.setVisible(false);
-            this.appendDummyInput('ADD' + this.idCount_).appendField("NAME_ATTR1").appendField(new Blockly.FieldTextInput(
-                this.findLegalName_("IMG" + this.idCount_), this.nameValidator), 'NAME' + this.idCount_).appendField(new Blockly.FieldButton(
-                "Upload Image"), 'IMG' + this.idCount_).setAlign(Blockly.ALIGN_RIGHT).appendField(blk, "IMG_DATA" + this.idCount_);
+            blk.setVisible(false);
+            this.appendDummyInput('ADD' + this.idCount_)
+                .appendField(Blockly.Msg.NAME).appendField(new Blockly.FieldTextInput(
+                this.findLegalName_("IMG" + this.idCount_), this.nameValidator), 'NAME' + this.idCount_)
+                .appendField(new Blockly.FieldButton(Blockly.Msg.UPLOAD + " " + Blockly.Msg.ACTION_IMAGE), 'IMG' + this.idCount_)
+                .setAlign(Blockly.ALIGN_RIGHT).appendField(blk, "IMG_DATA" + this.idCount_);
         } else if (num == -1) {
             this.removeInput('ADD' + this.idCount_);
             this.idCount_--;
@@ -875,13 +905,18 @@ Blockly.Blocks['robBrick_ev3_image'] = {
         return name;
     },
     onchange : function(what) {
+        console.log("*************");
+        console.log(what.name);
+        console.log(what.oldValue);
+        console.log(what.newValue);
+        /*
         if (what.name) {
             if (!what.name.startsWith("NAME") || (what.oldValue == what.newValue)) {
                 return;
             }
         } else {
             return;
-        }
+        }*/
         this.updateSendData_(0);
     }
 };

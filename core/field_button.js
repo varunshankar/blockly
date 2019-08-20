@@ -74,38 +74,49 @@ Blockly.FieldButton.prototype.setText = function(text) {
 Blockly.FieldButton.prototype.showEditor_ = function(opt_quietInput) {
     var input = document.createElement('input');
     input.type = 'file';
+    input.accept = ".png, .jpg, .jpeg, .svg";
     input.addEventListener("change", (evnt) =>{
         var file = input.files[0];
-        this.setText(file.name);
-        var buttonText = this.getText();
-        var reader = new FileReader();
-        reader.onload = function() {
-            var contents = reader.result;
-            //alert(contents);
-            var container = Blockly.Workspace.getByContainer("bricklyDiv");
-            if (container) {
-                var blocks = Blockly.Workspace.getByContainer("bricklyDiv").getAllBlocks();
-                for (var x = 0; x < blocks.length; x++) {
-                    var func = blocks[x].getAsset;
-                    if (func) {
-                        for(var i = 1; i <= blocks[x].idCount_; i++)
-                        {   console.log(buttonText);
-                            console.log(blocks[x].getField("IMG" + i));
-                            if (buttonText === blocks[x].getFieldValue("IMG" + i))
-                            {   console.log(x + " is logged");
-                                blocks[x].setFieldValue(contents.toString(), "IMG_DATA" + i);
-                                break;
-                            }
+        console.log(this);
+        console.log(this.text_);
+        console.log(this.name);
+        var ind = this.name.replace("IMG", '');
+        console.log(ind);
+        if(file.type.includes("image/")) {
+            this.setText(file.name);
+            var buttonText = this.getText();
+            var reader = new FileReader();
+            reader.onload = function () {
+                var contents = reader.result;
+                //alert(contents);
+                var container = Blockly.Workspace.getByContainer("bricklyDiv");
+                if (container) {
+                    var blocks = Blockly.Workspace.getByContainer("bricklyDiv").getAllBlocks();
+                    for (var x = 0; x < blocks.length; x++) {
+                        var func = blocks[x].getAsset;
+                        if (func) {
+                            console.log(x + " is logged" + ind);
+                            blocks[x].setFieldValue(contents.toString(), "IMG_DATA" + ind);
+                            /*
+                            for(var i = 1; i <= blocks[x].idCount_; i++)
+                            {   console.log(buttonText);
+                                console.log(blocks[x].getField("IMG" + i));
+                                if (buttonText === blocks[x].getFieldValue("IMG" + i))
+                                {   console.log(x + " is logged");
+                                    blocks[x].setFieldValue(contents.toString(), "IMG_DATA" + i);
+                                    break;
+                                }
+                            }*/
                         }
                     }
                 }
-            }
-        };
+            };
+        }
         reader.readAsDataURL(file);
     });
     input.click();
 };
-
+/*
 // Saves the field's value to an XML node. Allows for custom serialization.
 Blockly.FieldButton.prototype.toXml = function(fieldElement) {
     // The default implementation of this function creates a node that looks
@@ -134,7 +145,7 @@ Blockly.FieldButton.prototype.fromXml = function(fieldElement) {
     value.text = fieldElement.textContent;
     // The end goal is to call this.setValue()
     this.setValue(value);
-};
+};*/
 
 /**
  * Close the editor, save the results, and dispose of the editable

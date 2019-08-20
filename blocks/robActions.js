@@ -1883,7 +1883,7 @@ Blockly.Blocks['robActions_eval_expr'] = {
 		this.setOutput(true, type);
 	}
 };
-
+/*
 Blockly.Blocks['robActions_image'] = {
 	/**
 	 * Sets the chosen pin to the specified pull.
@@ -1894,7 +1894,7 @@ Blockly.Blocks['robActions_image'] = {
 	 *            available pins
 	 * @returns immediately
 	 * @memberof Block
-	 */
+
 
 	init : function() {
 		this.setColour(Blockly.CAT_CONTROL_RGB);
@@ -2012,3 +2012,4 @@ Blockly.Blocks['robActions_image'] = {
 			assetDropdown, 'ASSET' + inputNumber);
 	}
 };
+*/

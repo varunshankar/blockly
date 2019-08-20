@@ -1,7 +1,7 @@
 {
 	"@metadata": {
 		"author": "Ellen Spertus <ellen.spertus@gmail.com>",
-		"lastupdated": "2019-08-15 23:50:40.613346",
+		"lastupdated": "2019-08-20 03:57:06.916605",
 		"locale": "en",
 		"messagedocumentation" : "qqq"
 	},
@@ -1518,6 +1518,13 @@
 	"CB_BOTH": "Calli:bot both",
 	"CB_ALL": "Calli:bot all",
 	"PORT_INTERNAL": "Port internal",
+	"ACTION_IMAGE": "Image",
+	"NAME": "Name",
+	"CONFIGURATION_NO_ASSET": "no asset",
+	"TOOLBOX_ASSET": "Asset",
+	"UPLOAD": "Upload",
+	"UPLOADER": "Uploader",
+	"EV3_IMAGE_BRICK_TOOLTIP": "Represents the Image uploader of EV3 brick.",
 	"ACTION_PLOTTING": "plot",
 	"ACTION_PLOT_POINT": "plot a point",
 	"ACTION_PLOT_POINT_TOOLTIP": "plot a point with specified value (Y axis) at the specified tickmark (X axis)",
@@ -1531,10 +1538,5 @@
 	"YEND": "end of Y axis",
 	"XTICK": "distance between X ticks",
 	"YTICK": "distance between Y ticks",
-	"ACTION_PLOT_TICKMARK": "at tickmark",
-	"ACTION_IMAGE": "Image",
-	"IMAGE_NAME": "Name",
-	"CONFIGURATION_NO_ASSET": "no asset",
-	"SHOW_IMAGE": "Show Picture",
-	"TOOLBOX_ASSET": "Asset"
+	"ACTION_PLOT_TICKMARK": "at tickmark"
 }
