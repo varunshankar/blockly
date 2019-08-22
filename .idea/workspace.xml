@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8a3374a5-89f6-4c77-8902-0ece97b0ae4f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/core/blocking.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blockly_compressed.js" beforeDir="false" afterPath="$PROJECT_DIR$/blockly_compressed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blockly_uncompressed.js" beforeDir="false" afterPath="$PROJECT_DIR$/blockly_uncompressed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/bob3Actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/bob3Actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/bob3Communication.js" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/bob3Communication.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/logic.js" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/logic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/makeblockActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/makeblockActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/makeblockImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/makeblockImage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/mbedActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/mbedActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/mbedColour.js" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/mbedColour.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/mbedCommunication.js" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/mbedCommunication.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/mbedControls.js" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/mbedControls.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/mbedImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/mbedImage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/naoBrick.js" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/naoBrick.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/naoColour.js" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/naoColour.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/procedures.js" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/procedures.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/robActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/robActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/robBrick.js" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/robBrick.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/robColour.js" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/robColour.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/robCommunication.js" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/robCommunication.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/robConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/robConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/robConfigDefinitions.js" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/robConfigDefinitions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/robControls.js" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/robControls.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/robSensorDefinitions.js" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/robSensorDefinitions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/robSensors.js" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/robSensors.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/vorwerkActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/vorwerkActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks_compressed.js" beforeDir="false" afterPath="$PROJECT_DIR$/blocks_compressed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/block.js" beforeDir="false" afterPath="$PROJECT_DIR$/core/block.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/block_svg.js" beforeDir="false" afterPath="$PROJECT_DIR$/core/block_svg.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/css.js" beforeDir="false" afterPath="$PROJECT_DIR$/core/css.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dart_compressed.js" beforeDir="false" afterPath="$PROJECT_DIR$/dart_compressed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript_compressed.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript_compressed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lua_compressed.js" beforeDir="false" afterPath="$PROJECT_DIR$/lua_compressed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/ar.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/ar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/az.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/az.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/ba.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/ba.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/bcc.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/bcc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/be-tarask.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/be-tarask.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/bg.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/bg.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/bn.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/bn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/br.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/br.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/ca.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/ca.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/cs.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/cs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/da.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/da.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/de.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/de.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/el.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/el.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/en.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/es.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/es.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/fa.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/fa.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/fi.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/fi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/fr.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/fr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/he.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/he.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/hi.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/hi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/hrx.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/hrx.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/hu.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/hu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/ia.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/ia.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/id.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/id.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/is.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/is.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/it.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/it.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/ja.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/ja.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/ko.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/ko.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/lb.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/lb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/lki.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/lki.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/lrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/lrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/lt.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/lt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/mk.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/mk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/ms.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/ms.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/nb.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/nb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/nl.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/nl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/oc.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/oc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/pl.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/pl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/pms.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/pms.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/pt-br.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/pt-br.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/pt.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/pt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/ro.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/ro.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/ru.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/ru.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/sc.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/sc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/sd.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/sd.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/shn.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/shn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/sk.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/sk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/sl.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/sl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/sq.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/sq.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/sr.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/sr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/sv.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/sv.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/ta.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/ta.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/tcy.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/tcy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/th.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/th.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/tl.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/tl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/tlh.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/tlh.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/tr.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/tr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/uk.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/uk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/vi.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/vi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/zh-hans.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/zh-hans.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/js/zh-hant.js" beforeDir="false" afterPath="$PROJECT_DIR$/msg/js/zh-hant.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/json/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/msg/json/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/json/qqq.json" beforeDir="false" afterPath="$PROJECT_DIR$/msg/json/qqq.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msg/json/synonyms.json" beforeDir="false" afterPath="$PROJECT_DIR$/msg/json/synonyms.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php_compressed.js" beforeDir="false" afterPath="$PROJECT_DIR$/php_compressed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python_compressed.js" beforeDir="false" afterPath="$PROJECT_DIR$/python_compressed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/robMsg/json/de.json" beforeDir="false" afterPath="$PROJECT_DIR$/robMsg/json/de.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/robMsg/robMessages.js" beforeDir="false" afterPath="$PROJECT_DIR$/robMsg/robMessages.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/ev3_playground.html" beforeDir="false" afterPath="$PROJECT_DIR$/tests/ev3_playground.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/microbit_playground.html" beforeDir="false" afterPath="$PROJECT_DIR$/tests/microbit_playground.html" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/robMsg/robMessages.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="1316" column="37" selection-start-line="1316" selection-start-column="37" selection-end-line="1316" selection-end-column="37" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+                <element signature="e#477#483#0" expanded="true" />
+                <element signature="e#483#489#0" expanded="true" />
+                <element signature="e#489#495#0" expanded="true" />
+                <element signature="e#495#501#0" expanded="true" />
+                <element signature="e#501#507#0" expanded="true" />
+                <element signature="e#507#513#0" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/ev3_playground.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#2#8#0" expanded="true" />
+                <element signature="e#2#8#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/blocks/robActions.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="697">
+              <caret line="621" column="33" lean-forward="true" selection-start-line="621" selection-start-column="33" selection-end-line="621" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/robMsg/robMessages.js" />
+        <option value="$PROJECT_DIR$/blocks/robActions.js" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/blockly.iml" />
+        <option value="$PROJECT_DIR$/.idea/misc.xml" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="67" />
+    <option name="y" value="25" />
+    <option name="width" value="650" />
+    <option name="height" value="743" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="blockly" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blockly" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blockly" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blockly" type="462c0819:PsiDirectoryNode" />
+              <item name="blocks" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blockly" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blockly" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blockly" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blockly" type="462c0819:PsiDirectoryNode" />
+              <item name="robMsg" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blockly" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blockly" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8a3374a5-89f6-4c77-8902-0ece97b0ae4f" name="Default Changelist" comment="" />
+      <created>1566432473053</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1566432473053</updated>
+      <workItem from="1566432475132" duration="341000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="341000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="67" y="25" width="1299" height="743" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/robMsg/robMessages.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="1316" column="37" selection-start-line="1316" selection-start-column="37" selection-end-line="1316" selection-end-column="37" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="e#477#483#0" expanded="true" />
+            <element signature="e#483#489#0" expanded="true" />
+            <element signature="e#489#495#0" expanded="true" />
+            <element signature="e#495#501#0" expanded="true" />
+            <element signature="e#501#507#0" expanded="true" />
+            <element signature="e#507#513#0" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/blocking.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1042" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/block.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-20434" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/ev3_playground.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#2#8#0" expanded="true" />
+            <element signature="e#2#8#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blocks/robActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="621" column="33" lean-forward="true" selection-start-line="621" selection-start-column="33" selection-end-line="621" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

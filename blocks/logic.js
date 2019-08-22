@@ -508,7 +508,7 @@ Blockly.Blocks['logic_ternary'] = {
         .appendField(Blockly.Msg.LOGIC_TERNARY_IF_FALSE);
     this.setOutput(true);
     this.setTooltip(Blockly.Msg.LOGIC_TERNARY_TOOLTIP);
-    this.prevParentConnection_ = null;
+    this.connectionType = null;
   },
   /**
    * Called whenever anything on the workspace changes.
@@ -520,25 +520,23 @@ Blockly.Blocks['logic_ternary'] = {
     var blockA = this.getInputTargetBlock('THEN');
     var blockB = this.getInputTargetBlock('ELSE');
     var parentConnection = this.outputConnection.targetConnection;
-    // Disconnect blocks that existed prior to this change if they don't match.
-    if ((blockA || blockB) && parentConnection) {
-      for (var i = 0; i < 2; i++) {
-        var block = (i == 1) ? blockA : blockB;
-        if (block && !block.outputConnection.checkType_(parentConnection)) {
-          // Ensure that any disconnections are grouped with the causing event.
-          Blockly.Events.setGroup(e.group);
-          if (parentConnection === this.prevParentConnection_) {
-            this.unplug();
-            parentConnection.getSourceBlock().bumpNeighbours_();
-          } else {
-            block.unplug();
-            block.bumpNeighbours_();
-          }
-          Blockly.Events.setGroup(false);
-        }
-      }
+    var newConnectionType = null;
+    if (parentConnection) {
+      newConnectionType = parentConnection.check_;
+    } else if (blockA) {
+      newConnectionType = blockA.outputConnection.check_;
+    } else if (blockB) {
+      newConnectionType = blockB.outputConnection.check_;    	
+    } 
+    if (newConnectionType !== this.connectionType) {
+      Blockly.Events.setGroup(e.group);
+      this.setOutput(true, newConnectionType);
+      this.getInput("THEN").setCheck(newConnectionType);
+      this.getInput("ELSE").setCheck(newConnectionType);
+      this.render();
+      Blockly.Events.setGroup(false); 
+      this.connectionType = newConnectionType;
     }
-    this.prevParentConnection_ = parentConnection;
   }
 };
 

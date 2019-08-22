@@ -34,7 +34,8 @@ Blockly.Blocks['mbedCommunication_sendBlock'] = {
 //                this.sourceBlock_.updateType_(option);
 //            }
 //        });
-        var dataType = new Blockly.FieldDropdown([ [ Blockly.Msg.VARIABLES_TYPE_NUMBER, 'Number' ], [ Blockly.Msg.VARIABLES_TYPE_BOOLEAN, 'Boolean' ], [ Blockly.Msg.VARIABLES_TYPE_STRING, 'String' ] ], function(option) {
+        var dataType = new Blockly.FieldDropdown([ [ Blockly.Msg.VARIABLES_TYPE_NUMBER, 'Number' ], [ Blockly.Msg.VARIABLES_TYPE_BOOLEAN, 'Boolean' ],
+                [ Blockly.Msg.VARIABLES_TYPE_STRING, 'String' ] ], function(option) {
             if (option && this.sourceBlock_.getFieldValue('TYPE') !== option) {
                 this.sourceBlock_.updateType_(option);
             }
@@ -91,7 +92,8 @@ Blockly.Blocks['mbedCommunication_receiveBlock'] = {
 
     init : function() {
         this.setColour(Blockly.CAT_COMMUNICATION_RGB);
-        var dataType = new Blockly.FieldDropdown([ [ Blockly.Msg.VARIABLES_TYPE_NUMBER, 'Number' ], [ Blockly.Msg.VARIABLES_TYPE_BOOLEAN, 'Boolean' ], [ Blockly.Msg.VARIABLES_TYPE_STRING, 'String' ] ], function(option) {
+        var dataType = new Blockly.FieldDropdown([ [ Blockly.Msg.VARIABLES_TYPE_NUMBER, 'Number' ], [ Blockly.Msg.VARIABLES_TYPE_BOOLEAN, 'Boolean' ],
+                [ Blockly.Msg.VARIABLES_TYPE_STRING, 'String' ] ], function(option) {
             if (option && this.sourceBlock_.getFieldValue('TYPE') !== option) {
                 this.sourceBlock_.updateType_(option);
             }
@@ -131,8 +133,8 @@ Blockly.Blocks['mbedCommunication_setChannel'] = {
                 "name" : "CONNECTION",
                 "check" : "Number"
             } ],
-            "previousStatement": null,
-            "nextStatement": null,
+            "previousStatement" : null,
+            "nextStatement" : null,
             "colour" : Blockly.CAT_COMMUNICATION_RGB,
             "tooltip" : Blockly.Msg.CONNECTION_SET_CHANNEL_TOOLTIP,
         });

@@ -35,6 +35,7 @@ goog.require('Blockly.MutatorPlus');
 goog.require('Blockly.MutatorMinus');
 goog.require('Blockly.Warning');
 goog.require('Blockly.Error');
+goog.require('Blockly.Blocking');
 goog.require('Blockly.Workspace');
 goog.require('Blockly.Xml');
 goog.require('goog.array');

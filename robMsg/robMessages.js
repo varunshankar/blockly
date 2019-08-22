@@ -94,15 +94,34 @@ Blockly.Msg.GETSAMPLE_TOOLTIP = 'Gets the current reading from chosen sensor.';
 Blockly.Msg.TOUCH_ISPRESSED_TOOLTIP = 'Is the touch sensor pressed?';
 Blockly.Msg.KEY_ISPRESSED_TOOLTIP = 'Is the selected button pressed?';
 Blockly.Msg.PIN_ISTOUCHED_TOOLTIP = 'Is the selected pin touched?';
-Blockly.Msg.ULTRASONIC_GETSAMPLE_TOOLTIP = 'Gets the current reading from the ultrasonic sensor in cm. Maximum distance to messure is 255 cm.';
+Blockly.Msg.ULTRASONIC_GETSAMPLE_TOOLTIP = 'Gets the current reading from the ultrasonic sensor in cm. Maximum distance to measure is 255 cm.';
 Blockly.Msg.COLOUR_GETSAMPLE_TOOLTIP = 'Gets the current reading from the colour sensor.';
+Blockly.Msg.COLOUR_COLOUR_GETSAMPLE_TOOLTIP = 'Gets the current colour reading from the sensor.';
+Blockly.Msg.COLOUR_LIGHT_GETSAMPLE_TOOLTIP = 'Gets the current brightness reading from the sensor.';
+Blockly.Msg.COLOUR_AMBIENTLIGHT_GETSAMPLE_TOOLTIP = 'Gets the current ambient light reading from the sensor.';
+Blockly.Msg.COLOUR_RGB_GETSAMPLE_TOOLTIP = 'Gets the current colour reading from the colour sensor. Values are in the range 0 to 255.';
+Blockly.Msg.SENSOR_COLOUR_GETSAMPLE_TOOLTIP = Blockly.Msg.COLOUR_GETSAMPLE_TOOLTIP;
+Blockly.Msg.SENSOR_COLOUR_COLOUR_GETSAMPLE_TOOLTIP = Blockly.Msg.COLOUR_COLOUR_GETSAMPLE_TOOLTIP;
+Blockly.Msg.SENSOR_COLOUR_LIGHT_GETSAMPLE_TOOLTIP = Blockly.Msg.COLOUR_LIGHT_GETSAMPLE_TOOLTIP;
+Blockly.Msg.SENSOR_COLOUR_AMBIENTLIGHT_GETSAMPLE_TOOLTIP = Blockly.Msg.COLOUR_AMBIENTLIGHT_GETSAMPLE_TOOLTIP;
+Blockly.Msg.SENSOR_COLOUR_RGB_GETSAMPLE_TOOLTIP = Blockly.Msg.COLOUR_RGB_GETSAMPLE_TOOLTIP;
+Blockly.Msg.HTCOLOUR_GETSAMPLE_TOOLTIP = Blockly.Msg.COLOUR_GETSAMPLE_TOOLTIP;
+Blockly.Msg.HTCOLOUR_COLOUR_GETSAMPLE_TOOLTIP = Blockly.Msg.COLOUR_COLOUR_GETSAMPLE_TOOLTIP;
+Blockly.Msg.HTCOLOUR_LIGHT_GETSAMPLE_TOOLTIP = Blockly.Msg.COLOUR_LIGHT_GETSAMPLE_TOOLTIP;
+Blockly.Msg.HTCOLOUR_AMBIENTLIGHT_GETSAMPLE_TOOLTIP = Blockly.Msg.COLOUR_AMBIENTLIGHT_GETSAMPLE_TOOLTIP;
+Blockly.Msg.HTCOLOUR_RGB_GETSAMPLE_TOOLTIP = Blockly.Msg.COLOUR_RGB_GETSAMPLE_TOOLTIP;
+Blockly.Msg.SENSOR_HTCOLOUR_GETSAMPLE_TOOLTIP = Blockly.Msg.SENSOR_COLOUR_GETSAMPLE_TOOLTIP;
+Blockly.Msg.SENSOR_HTCOLOUR_COLOUR_GETSAMPLE_TOOLTIP = Blockly.Msg.SENSOR_COLOUR_COLOUR_GETSAMPLE_TOOLTIP;
+Blockly.Msg.SENSOR_HTCOLOUR_LIGHT_GETSAMPLE_TOOLTIP = Blockly.Msg.SENSOR_COLOUR_LIGHT_GETSAMPLE_TOOLTIP;
+Blockly.Msg.SENSOR_HTCOLOUR_AMBIENTLIGHT_GETSAMPLE_TOOLTIP = Blockly.Msg.SENSOR_COLOUR_AMBIENTLIGHT_GETSAMPLE_TOOLTIP;
+Blockly.Msg.SENSOR_HTCOLOUR_RGB_GETSAMPLE_TOOLTIP = Blockly.Msg.SENSOR_COLOUR_RGB_GETSAMPLE_TOOLTIP;
 Blockly.Msg.INFRARED_GETSAMPLE_TOOLTIP = 'Gets the current reading from the infrared sensor.';
 Blockly.Msg.INFRARED_GETSAMPLE_TOOLTIP_MBOT = 'Gets the current reading from the light sensor -- if a black line is detected (true/false).';
 Blockly.Msg.ENCODER_RESET_TOOLTIP = 'Resets the motor encoder.';
 Blockly.Msg.ENCODER_GETSAMPLE_TOOLTIP = 'Gets the current reading from the motor encoder.';
 Blockly.Msg.GYRO_RESET_TOOLTIP = 'Resets the gyro sensor.';
 Blockly.Msg.GYRO_GETSAMPLE_TOOLTIP = 'Gets the current reading from the gyro sensor.';
-Blockly.Msg.SENSOR_GYRO_GETSAMPLE_TOOLTIP_WEDO = 'Is the gyro sensor tilted in the indicated manner?';
+Blockly.Msg.SENSOR_GYRO_TILTED_GETSAMPLE_TOOLTIP_WEDO = 'Is the tilt sensors position the indicated manner?';
 Blockly.Msg.FLAME_GETSAMPLE_TOOLTIP = 'Gets the current reading from the flame sensor.';
 Blockly.Msg.TIMER_RESET_TOOLTIP = 'Resets the timer.';
 Blockly.Msg.TIMER_GETSAMPLE_TOOLTIP = 'Gets the current reading from the timer.';
@@ -110,10 +129,12 @@ Blockly.Msg.BATTERY_GETSAMPLE_TOOLTIP = 'Gets the current voltage from the batte
 /// Rob Brick tooltips
 Blockly.Msg.ULTRASONIC_TOOLTIP = 'Represents an ultrasonic sensor.';
 Blockly.Msg.COLOUR_TOOLTIP = 'Represents a colour sensor.';
+Blockly.Msg.HTCOLOUR_TOOLTIP = 'Represents a HiTechnic NXT Color Sensor V2.';
 Blockly.Msg.INFRARED_TOOLTIP = 'Represents an infrared sensor.';
-Blockly.Msg.IRSEEKER_TOOLTIP = 'Represents a HiTechnic NXT IRSeeker V2 sensor.'
+Blockly.Msg.IRSEEKER_TOOLTIP = 'Represents a HiTechnic NXT IRSeeker V2 sensor.';
 Blockly.Msg.TOUCH_TOOLTIP = 'Is the touch sensor pressed?';
 Blockly.Msg.GYRO_TOOLTIP = 'Represents a gyro sensor.';
+Blockly.Msg.GYRO_TOOLTIP_WEDO = 'Represents a tilt sensor.';
 Blockly.Msg.FLAME_TOOLTIP = 'Represents a flame sensor.';
 Blockly.Msg.MOTOR_BIG_TOOLTIP = 'Represents a big motor.';
 Blockly.Msg.MOTOR_MIDDLE_TOOLTIP = 'Represents a middle motor.';
@@ -215,10 +236,12 @@ Blockly.Msg.SENSOR_PIN = 'pin';
 Blockly.Msg.SENSOR_GROVE = 'Grove';
 Blockly.Msg.SENSOR_MIC = 'microphone';
 Blockly.Msg.SENSOR_COLOUR = 'colour sensor';
+Blockly.Msg.SENSOR_HTCOLOUR = 'HT colour sensor';
 Blockly.Msg.SENSOR_INFRARED = 'infrared sensor';
 Blockly.Msg.SENSOR_IRSEEKER = 'HT infrared sensor';
 Blockly.Msg.SENSOR_ENCODER = 'encoder';
 Blockly.Msg.SENSOR_GYRO = 'gyroscope';
+Blockly.Msg.SENSOR_GYRO_WEDO = 'tilt sensor';
 Blockly.Msg.SENSOR_FLAME = 'flame sensor';
 Blockly.Msg.SENSOR_BATTERY = 'battery charge';
 Blockly.Msg.SENSOR_KEY = 'button';
@@ -487,8 +510,9 @@ Blockly.Msg.ORA_COMPILERWORKFLOW_ERROR_CONFIGURATION_NOT_FOUND = 'The robot conf
 Blockly.Msg.ORA_COMPILERWORKFLOW_ERROR_PROGRAM_TRANSFORM_FAILED = 'The program could not be transformed into the robots programming language.';
 Blockly.Msg.ORA_COMPILERWORKFLOW_ERROR_CONFIGURATION_TRANSFORM_FAILED = 'The robot configuration could not be transformed into the robots programming language.';
 Blockly.Msg.ORA_COMPILERWORKFLOW_ERROR_PROGRAM_STORE_FAILED = 'The program could not be saved because of an internal error.';
-Blockly.Msg.ORA_COMPILERWORKFLOW_ERROR_PROGRAM_COMPILE_FAILED = 'Please check the error messages in your progamming blocks and the configuration! Your program has errors so it cannot be compiled.';
+Blockly.Msg.ORA_COMPILERWORKFLOW_ERROR_PROGRAM_COMPILE_FAILED = 'Your program has errors so it cannot be compiled. The compiler messages are: <span style="background-color:#ddd;font-family:courier;">{MESSAGE}</span>';
 Blockly.Msg.ORA_COMPILERWORKFLOW_ERROR_PROGRAM_GENERATION_FAILED = 'The program could not be generated.';
+Blockly.Msg.ORA_COMPILERWORKFLOW_ERROR_PROGRAM_GENERATION_FAILED_WITH_PARAMETERS = 'The program could not be generated. Pin {PIN} is incorrect in block {BLOCK}';
 Blockly.Msg.ORA_ROBOT_NOT_WAITING = 'The robot does not wait for a run command.';
 Blockly.Msg.ORA_ROBOT_PUSH_RUN = 'Robot waited and now the jar is pushed to the robot';
 Blockly.Msg.ORA_ROBOT_FIRMWAREUPDATE_POSSIBLE = 'The firmware was updated';
@@ -1005,6 +1029,7 @@ Blockly.Msg.CONNECTION_RECEIVE_TOOLTIP_BOB3 = 'Reads a message via the IR receiv
 Blockly.Msg.CONNECTION_SEND_TOOLTIP_BOB3 = 'Sends a message of type number to another Bob3. Hold the Bob3"s face to face!';
 
 Blockly.Msg.BLOCK_NOT_EXECUTED = 'The exection of this block will have no effect!';
+Blockly.Msg.BLOCK_NOT_SUPPORTED = 'This robot does not support this block!';
 
 Blockly.Msg.BOB3_RECALL_NUMBER = 'recall number';
 Blockly.Msg.BOB3_REMEMBER_NUMBER = 'remember number';
@@ -1292,15 +1317,11 @@ Blockly.Msg.CB_BOTH = 'Calli:bot both';
 Blockly.Msg.CB_ALL = 'Calli:bot all';
 Blockly.Msg.PORT_INTERNAL = 'Port internal';
 
-//Image block
-Blockly.Msg.ACTION_IMAGE = 'Image';
-Blockly.Msg.NAME = 'Name';
-Blockly.Msg.CONFIGURATION_NO_ASSET = 'no asset';
-Blockly.Msg.TOOLBOX_ASSET = 'Asset';
-Blockly.Msg.UPLOAD = 'Upload';
-Blockly.Msg.UPLOADER = 'Uploader';
-Blockly.Msg.EV3_IMAGE_BRICK_TOOLTIP = 'Represents the Image uploader of EV3 brick.';
-
+Blockly.Msg.CONFIGURATION_ERROR_WLAN_CREDENTIALS_MISSING = 'Missing WLAN credentials, please enter them in robot -> WLAN credentials ... !';
+Blockly.Msg.MENU_WLAN_CREDENTIALS = 'WLAN credentials';
+Blockly.Msg.POPUP_WLAN_SSID = 'SSID';
+Blockly.Msg.MENU_ROBOT_WLAN = 'WLAN credentials ...';
+Blockly.Msg.POPUP_WLAN_SECURITY_INFORMATION = 'Please note that the data provided in this dialog window is private and will not be stored in the OpenRoberta lab; it will only be used for program creation and during the compilation process. Make sure that for each new session you enter these credentials again. Please keep in mind that exposing this information to public may pose security risks.';
 
 //untranslated:
 Blockly.Msg.ACTION_PLOTTING = 'plot';
@@ -1317,3 +1338,19 @@ Blockly.Msg.YEND = 'end of Y axis';
 Blockly.Msg.XTICK = 'distance between X ticks';
 Blockly.Msg.YTICK = 'distance between Y ticks';
 Blockly.Msg.ACTION_PLOT_TICKMARK = 'at tickmark';
+
+Blockly.Msg.INIT_FAIL_MULTIPLE_FRONTENDS_ONE_HTTPSESSION = 'You are trying to connect to the openroberta-lab multiple times, e.g. by opening multiple tabs. This is not supported at the moment. Please close this view.';
+Blockly.Msg.INIT_FAIL_HTTPSESSION_EXPECTED_BUT_NOT_FOUND = 'The connection to the openroberta-lab was closed unexpectedly. This case is rare and may happen, if the openroberta-lab-server is restarted. Please start a new connection to the openroberta-lab, e.g. by closing and starting the browser or by hitting the »reload«-button.';
+
+Blockly.Msg.PROGRAM_ERROR_EXPRBLOCK_TYPECHECK = 'This expression is invalid. The type check failed.';
+Blockly.Msg.PROGRAM_ERROR_EXPRBLOCK_PARSE = 'This expression is syntactically incorrect.';
+Blockly.Msg.ICON_BLOCKING_TOOLTIP = 'Blocking block! This blocks needs some time to be executed, so other"s have to wait until it gives back the control to the caller function.'
+
+//Image block
+Blockly.Msg.ACTION_IMAGE = 'Image';
+Blockly.Msg.NAME = 'Name';
+Blockly.Msg.CONFIGURATION_NO_ASSET = 'no asset';
+Blockly.Msg.TOOLBOX_ASSET = 'Asset';
+Blockly.Msg.UPLOAD = 'Upload';
+Blockly.Msg.UPLOADER = 'Uploader';
+Blockly.Msg.EV3_IMAGE_BRICK_TOOLTIP = 'Represents the Image uploader of EV3 brick.';

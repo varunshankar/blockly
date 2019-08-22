@@ -25,21 +25,21 @@ Blockly.Blocks['mbedImage_image'] = {
     init : function() {
         this.setColour(Blockly.CAT_IMAGE_RGB);
         this.appendDummyInput().appendField("    0       1       2       3       4");
-        this.appendDummyInput().appendField("0").appendField(new Blockly.FieldPixelbox(' ', this.validate_), "P00").appendField(new Blockly.FieldPixelbox(
-                ' ', this.validate_), "P10").appendField(new Blockly.FieldPixelbox(' ', this.validate_), "P20").appendField(new Blockly.FieldPixelbox(
-                ' ', this.validate_), "P30").appendField(new Blockly.FieldPixelbox(' ', this.validate_), "P40");
-        this.appendDummyInput().appendField("1").appendField(new Blockly.FieldPixelbox(' ', this.validate_), "P01").appendField(new Blockly.FieldPixelbox(
-                ' ', this.validate_), "P11").appendField(new Blockly.FieldPixelbox(' ', this.validate_), "P21").appendField(new Blockly.FieldPixelbox(
-                ' ', this.validate_), "P31").appendField(new Blockly.FieldPixelbox(' ', this.validate_), "P41");
-        this.appendDummyInput().appendField("2").appendField(new Blockly.FieldPixelbox(' ', this.validate_), "P02").appendField(new Blockly.FieldPixelbox(
-                ' ', this.validate_), "P12").appendField(new Blockly.FieldPixelbox(' ', this.validate_), "P22").appendField(new Blockly.FieldPixelbox(
-                ' ', this.validate_), "P32").appendField(new Blockly.FieldPixelbox(' ', this.validate_), "P42");
-        this.appendDummyInput().appendField("3").appendField(new Blockly.FieldPixelbox(' ', this.validate_), "P03").appendField(new Blockly.FieldPixelbox(
-                ' ', this.validate_), "P13").appendField(new Blockly.FieldPixelbox(' ', this.validate_), "P23").appendField(new Blockly.FieldPixelbox(
-                ' ', this.validate_), "P33").appendField(new Blockly.FieldPixelbox(' ', this.validate_), "P43");
-        this.appendDummyInput().appendField("4").appendField(new Blockly.FieldPixelbox(' ', this.validate_), "P04").appendField(new Blockly.FieldPixelbox(
-                ' ', this.validate_), "P14").appendField(new Blockly.FieldPixelbox(' ', this.validate_), "P24").appendField(new Blockly.FieldPixelbox(
-                ' ', this.validate_), "P34").appendField(new Blockly.FieldPixelbox(' ', this.validate_), "P44");
+        this.appendDummyInput().appendField("0").appendField(new Blockly.FieldPixelbox(' ', this.validate_), "P00").appendField(new Blockly.FieldPixelbox(' ',
+                this.validate_), "P10").appendField(new Blockly.FieldPixelbox(' ', this.validate_), "P20").appendField(new Blockly.FieldPixelbox(' ',
+                this.validate_), "P30").appendField(new Blockly.FieldPixelbox(' ', this.validate_), "P40");
+        this.appendDummyInput().appendField("1").appendField(new Blockly.FieldPixelbox(' ', this.validate_), "P01").appendField(new Blockly.FieldPixelbox(' ',
+                this.validate_), "P11").appendField(new Blockly.FieldPixelbox(' ', this.validate_), "P21").appendField(new Blockly.FieldPixelbox(' ',
+                this.validate_), "P31").appendField(new Blockly.FieldPixelbox(' ', this.validate_), "P41");
+        this.appendDummyInput().appendField("2").appendField(new Blockly.FieldPixelbox(' ', this.validate_), "P02").appendField(new Blockly.FieldPixelbox(' ',
+                this.validate_), "P12").appendField(new Blockly.FieldPixelbox(' ', this.validate_), "P22").appendField(new Blockly.FieldPixelbox(' ',
+                this.validate_), "P32").appendField(new Blockly.FieldPixelbox(' ', this.validate_), "P42");
+        this.appendDummyInput().appendField("3").appendField(new Blockly.FieldPixelbox(' ', this.validate_), "P03").appendField(new Blockly.FieldPixelbox(' ',
+                this.validate_), "P13").appendField(new Blockly.FieldPixelbox(' ', this.validate_), "P23").appendField(new Blockly.FieldPixelbox(' ',
+                this.validate_), "P33").appendField(new Blockly.FieldPixelbox(' ', this.validate_), "P43");
+        this.appendDummyInput().appendField("4").appendField(new Blockly.FieldPixelbox(' ', this.validate_), "P04").appendField(new Blockly.FieldPixelbox(' ',
+                this.validate_), "P14").appendField(new Blockly.FieldPixelbox(' ', this.validate_), "P24").appendField(new Blockly.FieldPixelbox(' ',
+                this.validate_), "P34").appendField(new Blockly.FieldPixelbox(' ', this.validate_), "P44");
         this.setOutput(true, 'Image');
         this.setTooltip(Blockly.Msg.IMAGE_TOOLTIP);
     },

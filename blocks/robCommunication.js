@@ -146,6 +146,7 @@ Blockly.Blocks['robCommunication_receiveBlock'] = {
             this.appendValueInput('CONNECTION').setAlign(Blockly.ALIGN_RIGHT).appendField(Blockly.Msg.CONNECTION_FROM_CONNECTION).setCheck('Connection');
         }
         this.setOutput(true, this.dataType_);
+        this.setBlocking(true);
         this.setTooltip(Blockly.Msg.CONNECTION_RECEIVE_TOOLTIP);
         this.setInputsInline(false);
     },
@@ -174,6 +175,7 @@ Blockly.Blocks['robCommunication_waitForConnection'] = {
         this.setColour(Blockly.CAT_COMMUNICATION_RGB);
         this.appendDummyInput('').setAlign(Blockly.ALIGN_RIGHT).appendField(Blockly.Msg.CONNECTION_WAIT_FOR_CONNECTION);
         this.setOutput(true, 'Connection');
+        this.setBlocking(true);
         this.setTooltip(Blockly.Msg.CONNECTION_WAIT_TOOLTIP);
     }
 };

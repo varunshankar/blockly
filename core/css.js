@@ -272,17 +272,21 @@ Blockly.Css.CONTENT = [
   '}',
 
   '.blocklyIconGroup:not(:hover),',
-  '.blocklyIconGroupReadonly {',
+  '.blocklyIconGroupReadonly:not(.no){',
     'opacity: .6;',
   '}',
 
   '.blocklyIconShape {',
-    'fill: #00f;',
     'stroke: #fff;',
     'stroke-width: 1px;',
   '}',
 
   '.blocklyIconSymbol {',
+    'fill: #fff;',
+  '}',
+  
+  '.blocklyIconBlocking {',
+    'stroke-width: 0.5;',
     'fill: #fff;',
   '}',
   

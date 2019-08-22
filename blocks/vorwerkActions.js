@@ -28,6 +28,7 @@ Blockly.Blocks['vorwerkActions_play_file'] = {
         this.appendDummyInput().appendField(Blockly.Msg.PLAY + ' ' + Blockly.Msg.PLAY_FILE).appendField(file, 'FILE');
         this.setPreviousStatement(true);
         this.setNextStatement(true);
+        this.setBlocking(true);
         this.setTooltip(Blockly.Msg.PLAY_FILE_TOOLTIP);
         // this.setHelp(new Blockly.Help(Blockly.Msg.PLAY_FILE_HELP));
     }
@@ -161,6 +162,7 @@ Blockly.Blocks['vorwerkActions_motor_on_for'] = {
         this.appendValueInput('VALUE').setAlign(Blockly.ALIGN_RIGHT).appendField(Blockly.Msg.FOR).appendField(motorDistance, 'MOTORROTATION').setCheck('Number');
         this.setPreviousStatement(true);
         this.setNextStatement(true);
+        this.setBlocking(true);
         this.setTooltip(Blockly.Msg.MOTOR_ON_FOR_TOOLTIP);
     }
 };

@@ -200,6 +200,12 @@ Blockly.BlockSvg.prototype.mutatorPlus = null;
 Blockly.BlockSvg.prototype.mutatorMinus = null;
 
 /**
+ * Block's blocking icon (if any).
+ * @type {Blockly.Blocking}
+ */
+Blockly.BlockSvg.prototype.blocking = null;
+
+/**
  * Block's comment icon (if any).
  * @type {Blockly.Comment}
  */
@@ -240,6 +246,9 @@ Blockly.BlockSvg.prototype.getIcons = function() {
   }
   if (this.error) {
     icons.push(this.error);
+  }
+  if (this.blocking) {
+      icons.push(this.blocking);
   }
   return icons;
 };
@@ -1576,6 +1585,23 @@ Blockly.BlockSvg.prototype.setMutatorMinus = function(mutatorMinus) {
     this.mutatorMinus = mutatorMinus;
     if (this.rendered) {
       this.mutatorMinus.createIcon();
+    }
+  }
+};
+
+/**
+ * Give this block a blocking icon.
+ * @param {Blockly.Blocking} blocking A blocking instance or null to remove.
+ */
+Blockly.BlockSvg.prototype.setBlocking = function(blocking) {
+  if ((this.blocking && blocking) || !blocking) {
+    this.blocking.dispose();
+    this.blocking = null;
+  }
+  if (blocking) {
+    this.blocking = new Blockly.Blocking(this);
+    if (this.rendered) {
+      this.blocking.createIcon();
     }
   }
 };

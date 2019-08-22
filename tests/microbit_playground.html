@@ -90,7 +90,7 @@
                        variableDeclaration: true,
                        robControls: true
                       });
-              workspace.setDevice(device);
+              workspace.setDevice({group: device, robot: device});
               // Restore previously displayed text.
               if (sessionStorage) {
                 var text = sessionStorage.getItem('textarea');
@@ -322,15 +322,15 @@
 	<category
 		name="TOOLBOX_SENSOR"
 		svg="true">
-		<block type="mbedSensors_key_isPressed"></block>
-		<block type="mbedSensors_gesture_isActive"></block>
-		<block type="mbedSensors_compass_getSample"></block>
-		<block type="mbedSensors_timer_getSample"></block>
+		<block type="robSensors_key_getSample"></block>
+		<block type="robSensors_gesture_getSample"></block>
+		<block type="robSensors_compass_getSample"></block>
+		<block type="robSensors_timer_getSample"></block>
 		<block type="mbedSensors_timer_reset"></block>
-		<block type="mbedSensors_temperature_getSample"></block>
-		<block type='mbedSensors_pin_isTouched'></block>
-		<block type='mbedSensors_pin_getSample'></block>
-		<block type='mbedSensors_acceleration_getSample'></block>
+		<block type="robSensors_temperature_getSample"></block>
+		<block type='robSensors_pintouch_getSample'></block>
+		<block type='robSensors_pin_getSample'></block>
+		<block type='robSensors_accelerometer_getSample'></block>
 	</category>
 	<category
 		name="TOOLBOX_CONTROL"

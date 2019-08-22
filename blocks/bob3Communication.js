@@ -58,6 +58,7 @@ Blockly.Blocks['bob3Communication_receiveBlock'] = {
         } else if (this.workspace.device === 'mbot') {
             this.setOutput(true, 'String');
         }
+        this.setBlocking(true);
         this.setTooltip(Blockly.Msg['CONNECTION_RECEIVE_TOOLTIP_' + this.workspace.device.toUpperCase()]);
         this.setInputsInline(false);
     }

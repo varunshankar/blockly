@@ -37,6 +37,7 @@ Blockly.Blocks.mbedColour.HUE = 20;
 Blockly.Blocks['mbedColour_picker'] = {
     /**
      * Block for colour picker.
+     * 
      * @this Blockly.Block
      */
     init : function() {
@@ -64,6 +65,7 @@ Blockly.Blocks['mbedColour_picker'] = {
 Blockly.Blocks['mbedColour_rgb'] = {
     /**
      * Block for composing a colour from RGB components.
+     * 
      * @this Blockly.Block
      */
     init : function() {

@@ -370,14 +370,10 @@ confBlocks.lcdi2c.sensebox = {
     pins : function(a) {
         return [ [ 'I2C', 'I2C' ] ];
     },
-    inputs : [['TITLE', 'P'], ['XLABEL', 'X'], 
-        ['YLABEL', 'Y'], ['XSTART', '0'], 
-        ['XEND', '100'], ['YSTART', '0'], 
-        ['YEND', '50'], ['XTICK', '10'], 
-        ['YTICK', '10'] ],
+    inputs : [ [ 'TITLE', 'P' ], [ 'XLABEL', 'X' ], [ 'YLABEL', 'Y' ], [ 'XSTART', '0' ], [ 'XEND', '100' ], [ 'YSTART', '0' ], [ 'YEND', '50' ],
+            [ 'XTICK', '10' ], [ 'YTICK', '10' ] ],
     sensor : false
 };
-
 
 confBlocks.led = {};
 confBlocks.led.arduino = {
@@ -574,7 +570,6 @@ confBlocks.analogin.arduino = {
 confBlocks.wireless = {}
 confBlocks.wireless.sensebox = {
     title : 'WIRELESS',
-    inputs : [ [ 'SSID', '' ], [ 'PASSWORD', '' ] ],
     dropdowns : [ [ 'CONNECTOR', [ [ 'XBEE1', 'XBEE1' ] ] ] ],
     sensor : false
 };
@@ -590,11 +585,8 @@ confBlocks.sdcard.sensebox = {
 confBlocks.plotting = {}
 confBlocks.plotting.sensebox = {
     title : 'PLOTTING',
-    inputs : [['TITLE', 'P'], ['XLABEL', 'X'], 
-              ['YLABEL', 'Y'], ['XSTART', '0'], 
-              ['XEND', '100'], ['YSTART', '0'], 
-              ['YEND', '50'], ['XTICK', '10'], 
-              ['YTICK', '10'] ],
+    inputs : [ [ 'TITLE', 'P' ], [ 'XLABEL', 'X' ], [ 'YLABEL', 'Y' ], [ 'XSTART', '0' ], [ 'XEND', '100' ], [ 'YSTART', '0' ], [ 'YEND', '50' ],
+            [ 'XTICK', '10' ], [ 'YTICK', '10' ] ],
     sensor : false
 };
 

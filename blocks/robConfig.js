@@ -47,7 +47,8 @@ Blockly.Blocks['robConf_generic'] = {
         };
 
         var type = confBlock.sensor ? 'SENSOR_' : 'ACTION_';
-        var name = Blockly.RobConfig.findLegalName(Blockly.Msg[type + confBlock.title].charAt(0).toUpperCase() || Blockly.Msg[type + confBlock.title]
+        var msg = Blockly.Msg[type + confBlock.title + "_" + this.workspace.device.toUpperCase()] || Blockly.Msg[type + confBlock.title];
+        var name = Blockly.RobConfig.findLegalName(msg.charAt(0).toUpperCase() || Blockly.Msg[type + confBlock.title]
                 || Blockly.checkMsgKey('CONFIGURATION_PORT'), this);
         this.nameOld = name;
         var nameField = new Blockly.FieldTextInput(name, validateName);
@@ -81,11 +82,6 @@ Blockly.Blocks['robConf_generic'] = {
                     this.setFieldValue(newName, 'VAR');
                 }
             };
-        }
-
-        if (confBlock.id) {
-            var idInputField = new Blockly.FieldTextInput('openSenseMap Sensor ID');
-            this.appendDummyInput().setAlign(Blockly.ALIGN_RIGHT).appendField(Blockly.Msg['ID']).appendField(idInputField);
         }
 
         /**
@@ -133,12 +129,12 @@ Blockly.Blocks['robConf_generic'] = {
                 this.appendDummyInput().setAlign(Blockly.ALIGN_RIGHT).appendField(confBlock.fixedPorts[i][0]).appendField(dropDown);
             }
         }
-
+        var that = this;
         this.setTooltip(function() {
-            return Blockly.Msg[confBlock.title + '_TOOLTIP'] || confBlock.title + '_TOOLTIP';
+            return Blockly.Msg[confBlock.title + '_TOOLTIP_' + that.workspace.device.toUpperCase()] || Blockly.Msg[confBlock.title + '_TOOLTIP']
+                    || confBlock.title + '_TOOLTIP';
         });
         this.type = 'robConf_' + confBlock.title.toLowerCase();
-        var that = this;
         this.getConfigDecl = function() {
             return {
                 'type' : confBlock.title.toLowerCase(),

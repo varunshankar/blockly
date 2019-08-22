@@ -395,18 +395,18 @@ Blockly.Blocks['robBrick_colour'] = {
     }
 };
 
-Blockly.Blocks['robBrick_HiTechnic_colour'] = {
+Blockly.Blocks['robBrick_htcolour'] = {
     /**
-     * Represent EV3 colour sensor.
+     * Represent HiTechnic NXT Color Sensor V2.
      * 
-     * @constructs robBrick_colour
+     * @constructs robBrick_htcolour
      * @memberof Block
      */
     init : function() {
         this.setColour(Blockly.CAT_SENSOR_RGB);
-        this.appendDummyInput().appendField('HiTechnic ' + Blockly.Msg.SENSOR_COLOUR);
+        this.appendDummyInput().appendField(Blockly.Msg.SENSOR_HTCOLOUR);
         this.setOutput(true, 'Sensor');
-        this.setTooltip(Blockly.Msg.COLOUR_TOOLTIP);
+        this.setTooltip(Blockly.Msg.HTCOLOUR_TOOLTIP);
     }
 };
 

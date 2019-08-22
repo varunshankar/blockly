@@ -15,7 +15,7 @@ goog.require('Blockly.Blocks');
 Blockly.Blocks['makeblockActions_leds_on'] = {
     /**
      * Turn brick LED on.
-     *
+     * 
      * @constructs makeblockActions_leds_on
      * @this.Blockly.Block
      * @param {String/dropdown}
@@ -40,7 +40,7 @@ Blockly.Blocks['makeblockActions_leds_on'] = {
 Blockly.Blocks['makeblockActions_leds_off'] = {
     /**
      * Turn brick LED off.
-     *
+     * 
      * @constructs makeblockActions_brickLight_off
      * @this.Blockly.Block
      * @returns immediately

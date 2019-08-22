@@ -16,7 +16,7 @@ goog.require('Blockly.Blocks');
 Blockly.Blocks['robColour_picker'] = {
     /**
      * Pick a colour from the systems colour palette.
-     *
+     * 
      * @constructs robColour_picker
      * @this.Blockly.Block
      * @param {Colour/Palette}
@@ -35,21 +35,23 @@ Blockly.Blocks['robColour_picker'] = {
         var colorField = new Blockly.FieldColour('#FFFFFF');
         switch (this.workspace.device) {
         case 'nxt':
-            colorField.setColours([ '#000000', '#0057A6', '#00642E', '#00FF00', '#585858', '#800080', '#B30006', '#DC143C', '#EE82EE', '#F7D117', '#FF00FF', '#FFA500', '#FFFFFF' ]).setColumns(13);
+            colorField.setColours([ '#000000', '#0057A6', '#00642E', '#00FF00', '#585858', '#800080', '#B30006', '#DC143C', '#EE82EE', '#F7D117', '#FF00FF',
+                    '#FFA500', '#FFFFFF' ]).setColumns(13);
             break;
         case 'bob3':
-            colorField.setColours([ '#000000', '#0000FF', '#228822', '#4466EE', '#4488AA', '#6633AA', '#6699EE', '#55FF99', '#00FF00', '#77FFDD', '#00FFFF', '#DD4422', '#FF0000', '#FF0088', '#FF00FF', '#FF7755', '#FF8800', '#FFFF00', '#FFFFFF' ]).setColumns(19);
+            colorField.setColours([ '#000000', '#0000FF', '#228822', '#4466EE', '#4488AA', '#6633AA', '#6699EE', '#55FF99', '#00FF00', '#77FFDD', '#00FFFF',
+                    '#DD4422', '#FF0000', '#FF0088', '#FF00FF', '#FF7755', '#FF8800', '#FFFF00', '#FFFFFF' ]).setColumns(19);
             break;
         case 'botnroll':
         case 'ev3':
             colorField.setColours([ '#000000', '#0057A6', '#00642E', '#532115', '#585858', '#B30006', '#F7D117', '#FFFFFF' ]).setColumns(8);
-            break; 
+            break;
         case 'wedo':
             colorField = new Blockly.FieldColour('#FFFFFE');
             colorField.setColours([ '#FF1493', '#800080', '#4876FF', '#00FFFF', '#90EE90', '#008000', '#FFFF00', '#FFA500', '#FF0000', '#FFFFFE' ]).setColumns(10);
             break;
         default:
-        // all colors are available, nothing to constrain
+            // all colors are available, nothing to constrain
         }
         this.appendDummyInput().appendField(colorField, 'COLOUR');
         this.setOutput(true, 'Colour');
@@ -66,6 +68,7 @@ Blockly.Blocks['robColour_picker'] = {
 Blockly.Blocks['robColour_rgb'] = {
     /**
      * Block for composing a colour from RGB components.
+     * 
      * @this Blockly.Block
      */
     init : function() {

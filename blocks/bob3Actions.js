@@ -13,7 +13,7 @@ goog.require('Blockly.Blocks');
 Blockly.Blocks['bob3Actions_set_led'] = {
     /**
      * Turn bricklight on.
-     *
+     * 
      * @constructs bob3Actions_leds_on
      * @this.Blockly.Block
      * @param {String/dropdown}
@@ -36,7 +36,7 @@ Blockly.Blocks['bob3Actions_set_led'] = {
 
 Blockly.Blocks['bob3Actions_recall'] = {
     /**
-     *
+     * 
      * @constructs bob3Actions_recall
      * @this.Blockly.Block
      * @returns immediately
@@ -53,7 +53,7 @@ Blockly.Blocks['bob3Actions_recall'] = {
 
 Blockly.Blocks['bob3Actions_remember'] = {
     /**
-     *
+     * 
      * @constructs bob3Actions_remember
      * @this.Blockly.Block
      * @returns immediately
@@ -62,7 +62,7 @@ Blockly.Blocks['bob3Actions_remember'] = {
 
     init : function() {
         this.setColour(Blockly.CAT_ACTION_RGB);
-        this.appendValueInput('VALUE').appendField(Blockly.Msg.BOB3_REMEMBER_NUMBER).setCheck([ 'Number']);
+        this.appendValueInput('VALUE').appendField(Blockly.Msg.BOB3_REMEMBER_NUMBER).setCheck([ 'Number' ]);
         this.setPreviousStatement(true);
         this.setNextStatement(true);
         this.setTooltip(Blockly.Msg.BOB3_SAVENUMBER_TOOLTIP);

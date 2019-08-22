@@ -317,6 +317,7 @@ Blockly.Blocks['robControls_wait'] = {
         this.setNextStatement(true);
         this.waitCount_ = 0;
         this.setMutatorPlus(new Blockly.MutatorPlus(this));
+        this.setBlocking(true);
         this.setTooltip(Blockly.Msg.WAIT_TOOLTIP);
     },
     /**
@@ -349,7 +350,7 @@ Blockly.Blocks['robControls_wait'] = {
             if (x == 1) {
                 this.appendStatementInput('DO0').appendField(Blockly.Msg.CONTROLS_REPEAT_INPUT_DO);
             }
-            this.appendValueInput('WAIT' + x).appendField(Blockly.Msg.CONTROLS_WAIT_OR).setCheck('Boolean');
+            this.appendValueInput('WAIT' + x).appendField(Blockly.Msg.WAIT_OR).setCheck('Boolean');
             this.appendStatementInput('DO' + x).appendField(Blockly.Msg.CONTROLS_REPEAT_INPUT_DO);
         }
         if (this.waitCount_ >= 1) {
@@ -421,6 +422,7 @@ Blockly.Blocks['robControls_wait_time'] = {
         this.appendValueInput('WAIT').appendField(Blockly.Msg.WAIT).setCheck('Number');
         this.setPreviousStatement(true);
         this.setNextStatement(true);
+        this.setBlocking(true);
         this.setTooltip(Blockly.Msg.WAIT_TIME_TOOLTIP);
     }
 };
@@ -445,6 +447,7 @@ Blockly.Blocks['robControls_wait_for'] = {
         this.waitCount_ = 0;
         //this.setHelp(new Blockly.Help(Blockly.Msg.WAIT_FOR_HELP));
         this.setMutatorPlus(new Blockly.MutatorPlus(this));
+        this.setBlocking(true);
         this.setTooltip(Blockly.Msg.WAIT_FOR_TOOLTIP);
     },
     /**
