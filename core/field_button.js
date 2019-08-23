@@ -72,21 +72,40 @@ Blockly.FieldButton.prototype.setText = function(text) {
  * @private
  */
 Blockly.FieldButton.prototype.showEditor_ = function(opt_quietInput) {
+
     var input = document.createElement('input');
     input.type = 'file';
     input.accept = ".png, .jpg, .jpeg, .svg";
     input.addEventListener("change", (evnt) =>{
         var file = input.files[0];
-        console.log(this);
-        console.log(this.text_);
-        console.log(this.name);
         var ind = this.name.replace("IMG", '');
-        console.log(ind);
         if(file.type.includes("image/")) {
             this.setText(file.name);
             var buttonText = this.getText();
             var reader = new FileReader();
             reader.onload = function () {
+
+                var img = new Image();
+                img.onload = function() {
+                    var canvas = document.createElement( "canvas" );
+                    var scale = 1;
+                    if ( img.height > 800 ) {
+                        scale = 800.0 / img.height;
+                    }
+                    canvas.width = img.width * scale;
+                    canvas.height = img.height * scale;
+                    var ctx = canvas.getContext( "2d" );
+                    ctx.scale( scale, scale );
+                    ctx.drawImage( img, 0, 0 );
+                    var dataURL = canvas.toDataURL( "image/png" );
+                    localStorage.setItem( "customBackground", dataURL.replace( /^data:image\/(png|jpg);base64,/, "" ) );
+                    var dataImage = localStorage.getItem( 'customBackground' );
+                    var image = new Image();
+                    image.src = "data:image/png;base64," + dataImage;
+                };
+                img.src = reader.result;
+
+
                 var contents = reader.result;
                 //alert(contents);
                 var container = Blockly.Workspace.getByContainer("bricklyDiv");
@@ -95,18 +114,7 @@ Blockly.FieldButton.prototype.showEditor_ = function(opt_quietInput) {
                     for (var x = 0; x < blocks.length; x++) {
                         var func = blocks[x].getAsset;
                         if (func) {
-                            console.log(x + " is logged" + ind);
                             blocks[x].setFieldValue(contents.toString(), "IMG_DATA" + ind);
-                            /*
-                            for(var i = 1; i <= blocks[x].idCount_; i++)
-                            {   console.log(buttonText);
-                                console.log(blocks[x].getField("IMG" + i));
-                                if (buttonText === blocks[x].getFieldValue("IMG" + i))
-                                {   console.log(x + " is logged");
-                                    blocks[x].setFieldValue(contents.toString(), "IMG_DATA" + i);
-                                    break;
-                                }
-                            }*/
                         }
                     }
                 }
@@ -180,5 +188,3 @@ Blockly.FieldButton.prototype.widgetDispose_ = function() {
         Blockly.WidgetDiv.DIV.style.width = 'auto';
     };
 };
-
-//Blockly.Field.register('field_button', Blockly.FieldButton);

@@ -572,7 +572,7 @@ Blockly.Blocks['robActions_display_picture_new'] = {
      * @constructs robActions_display_picture_new
      * @this.Blockly.Block
      * @param {String/dropdown}
-     *            PICTURE - Smiley1-4
+     *            PICTURE - Smiley1-4 and custom uploaded images.
      * @returns immediately
      * @memberof Block
      */
@@ -595,7 +595,6 @@ Blockly.Blocks['robActions_display_picture_new'] = {
 		var container = Blockly.Workspace.getByContainer("bricklyDiv");
 		if (container) {
 			var blocks = Blockly.Workspace.getByContainer("bricklyDiv").getAllBlocks();
-			console.log("BL" + blocks.length);
 			for (var x = 0; x < blocks.length; x++) {
 				var func = blocks[x].getAsset;
 				if (func) {
@@ -614,19 +613,12 @@ Blockly.Blocks['robActions_display_picture_new'] = {
 		var dropDown = this.getField('PICTURE');
 		var oldDropDownvalue = dropDown.getValue();
 		var newAssets = this.generateAssetInputs_();
-		console.log("******START*********");
-		console.log(oldDropDownvalue);
-		console.log(newAssets);
 		for(var i = 0; i < newAssets.length; i++){
-			console.log(newAssets[i]);
-			console.log(newAssets[i][1]);
 			if(newAssets[i][1] === oldDropDownvalue){
 				this.setFieldValue(oldDropDownvalue, 'PICTURE');
-				console.log("------END--------");
 				break;
 			}
 		}
-		//this.render();
 	},
 	generateAssetInputs_ : function() {
 		this.removeInput('ADD');

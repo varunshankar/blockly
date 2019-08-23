@@ -752,7 +752,9 @@ Blockly.Blocks['robBrick_actor'] = {
 var getAsset_glb = function(){
     var asset = [];
     for (var x = 1; x <= this.idCount_; x++) {
-        asset.push(this.getField('NAME' + x).getValue());
+        if(this.getField('IMG_DATA' + x).getValue() !== " ") {
+            asset.push(this.getField('NAME' + x).getValue());
+        }
     }
     return asset;
 };
@@ -772,7 +774,7 @@ Blockly.Blocks['robBrick_ev3_image'] = {
         var blk = new Blockly.FieldTextInput(" ");
         blk.setVisible(false);
         this.appendDummyInput()
-            .appendField(new Blockly.FieldLabel(Blockly.Msg.ACTION_IMAGE + " "+ Blockly.Msg.UPLOADER , 'brick_label'));
+            .appendField(Blockly.Msg.ACTION_IMAGE + " "+ Blockly.Msg.UPLOADER);
         this.appendDummyInput('ADD1')
             .appendField(Blockly.Msg.NAME)
             .appendField(new Blockly.FieldTextInput(this.findLegalName_("IMG1"), this.nameValidator), 'NAME1')
@@ -788,13 +790,7 @@ Blockly.Blocks['robBrick_ev3_image'] = {
     },
     nameValidator : function(name) {
         var block = this.sourceBlock_;
-        console.log(this);
         name = name.replace(/[\s\xa0]+/g, '').replace(/^ | $/g, '');
-        // no name set -> invalid
-        console.log("))))))))))***********(((((((((");
-        console.log("here" + name);
-        console.log(block.getAsset());
-        console.log(block.idCount_);
         var images = block.getAsset();
         var overlappedImageNames = images.filter(function(a){
             return images.indexOf(a) !== images.lastIndexOf(a)
@@ -808,17 +804,10 @@ Blockly.Blocks['robBrick_ev3_image'] = {
              Blockly.Msg.DISPLAY_PICTURE_TACHO
         ];
         var x = this.name.replace("NAME", '');
-        console.log("INSIDE"+ x);
         if(name === '' || overlappedImageNames.includes(name) || predefinedImages.includes(name)){
             block.updateSendData_(0);
             return 'IMG' + x;
         }
-
-        console.log("END___________");
-        /*
-        if (!name.match(/^[a-zA-Z][a-zA-Z_$0-9]*$/))
-            return null;*/
-        //block.updateSendData_(0);
         return name;
     },
     idValidator : function(id) {
@@ -905,18 +894,17 @@ Blockly.Blocks['robBrick_ev3_image'] = {
         return name;
     },
     onchange : function(what) {
-        console.log("*************");
-        console.log(what.name);
-        console.log(what.oldValue);
-        console.log(what.newValue);
-        /*
         if (what.name) {
+            if (what.name.startsWith("IMG_DATA") && (what.oldValue != what.newValue)) {
+                this.updateSendData_(0);
+                return;
+            }
             if (!what.name.startsWith("NAME") || (what.oldValue == what.newValue)) {
                 return;
             }
         } else {
             return;
-        }*/
+        }
         this.updateSendData_(0);
     }
 };
