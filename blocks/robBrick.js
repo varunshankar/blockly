@@ -43,7 +43,7 @@ Blockly.Blocks['robBrick_EV3-Brick'] = {
             this.setTooltip(Blockly.Msg.NXTBRICK_TOOLTIP);
         }
         this.appendValueInput('AST_IMG').appendField(Blockly.Msg.TOOLBOX_IMAGE).setAlign(Blockly.ALIGN_RIGHT).setCheck('Picture');
-        this.appendValueInput('AST_SND').appendField('Sound').setAlign(Blockly.ALIGN_RIGHT).setCheck('Sound');
+        //this.appendValueInput('AST_SND').appendField('Sound').setAlign(Blockly.ALIGN_RIGHT).setCheck('Sound');
         this.setDeletable(false);
     }
 };
@@ -782,11 +782,37 @@ Blockly.Blocks['robBrick_ev3_image'] = {
             .setAlign(Blockly.ALIGN_RIGHT).appendField(blk, "IMG_DATA1");
 
         this.idCount_ = 1;
+        this.imgDataIndex = 0;
         this.setMutatorPlus(new Blockly.MutatorPlus(this));
         this.setTooltip(Blockly.Msg.EV3_IMAGE_BRICK_TOOLTIP);
+        document.getElementById("img_data_capt").addEventListener("click", function(){
+            var canvas = document.getElementById('canvas');
+            var ctx = canvas.getContext( "2d" );
+            console.log("INSIDE EVENT LISTENER");
+            var container = Blockly.Workspace.getByContainer("bricklyDiv");
+            if (container) {
+                var blocks = Blockly.Workspace.getByContainer("bricklyDiv").getAllBlocks();
+                for (var x = 0; x < blocks.length; x++) {
+                    var func = blocks[x].getAsset;
+                    if (func) {
+                        console.log(blocks[x].getImageDataIndex());
+                        //blocks[x].setFieldValue(contents.toString(), "IMG_DATA" + ind);
+                        console.log(blocks[x].getFieldValue("IMG_DATA" + blocks[x].getImageDataIndex()));
+                        console.log("*****************");
+                        blocks[x].setFieldValue(canvas.toDataURL(), "IMG_DATA" + blocks[x].getImageDataIndex());
+                    }
+                }
+            }
+        });
     },
     getAsset : function() {
         return getAsset_glb.call(this);
+    },
+    setImageDataIndex : function(num) {
+        this.imgDataIndex = num;
+    },
+    getImageDataIndex : function() {
+        return this.imgDataIndex;
     },
     nameValidator : function(name) {
         var block = this.sourceBlock_;

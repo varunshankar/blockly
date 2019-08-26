@@ -73,51 +73,132 @@ Blockly.FieldButton.prototype.setText = function(text) {
  */
 Blockly.FieldButton.prototype.showEditor_ = function(opt_quietInput) {
 
+    var grayscaleImg;
+    var painted;
+    var brightnessSlider = document.getElementById('BrightnessSlider');
+    var brightnessValue = document.getElementById('BrightnessValue');
+    var contrastSlider = document.getElementById('ContrastSlider');
+    var contrastValue = document.getElementById('ContrastValue');
+    var ind;
+    brightnessSlider.addEventListener('change', function (event) {
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext( "2d" );
+        if (!painted) return;
+        reDraw(grayscaleImg, ctx);
+        var imageData;
+        brightnessValue.innerText = event.currentTarget.value;
+        imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+        applyBrightness(imageData.data, parseInt(brightnessSlider.value, 10));
+        applyContrast(imageData.data, parseInt(contrastSlider.value, 10));
+        ctx.putImageData(imageData, 0, 0);
+    });
+    contrastSlider.addEventListener('change', function (event) {
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext( "2d" );
+        if (!painted) return;
+        reDraw(grayscaleImg, ctx);
+        var imageData;
+        contrastValue.innerText = event.currentTarget.value;
+        imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+        applyContrast(imageData.data, parseInt(contrastSlider.value, 10));
+        applyBrightness(imageData.data, parseInt(brightnessSlider.value, 10));
+        ctx.putImageData(imageData, 0, 0);
+    });
+
+    function applyBrightness(data, brightness) {
+        for (var i = 0; i < data.length; i+= 4) {
+            data[i] += 255 * (brightness / 100);
+            data[i+1] += 255 * (brightness / 100);
+            data[i+2] += 255 * (brightness / 100);
+        }
+    }
+
+    function truncateColor(value) {
+        if (value < 0) {
+            value = 0;
+        } else if (value > 255) {
+            value = 255;
+        }
+        return value;
+    }
+
+    function applyContrast(data, contrast) {
+        var factor = (259.0 * (contrast + 255.0)) / (255.0 * (259.0 - contrast));
+        for (var i = 0; i < data.length; i+= 4) {
+            data[i] = truncateColor(factor * (data[i] - 128.0) + 128.0);
+            data[i+1] = truncateColor(factor * (data[i+1] - 128.0) + 128.0);
+            data[i+2] = truncateColor(factor * (data[i+2] - 128.0) + 128.0);
+        }
+    }
+    function reDraw(contents, ctx){
+        ctx.putImageData( contents, 0, 0 );
+    }
+
     var input = document.createElement('input');
     input.type = 'file';
     input.accept = ".png, .jpg, .jpeg, .svg";
     input.addEventListener("change", (evnt) =>{
         var file = input.files[0];
-        var ind = this.name.replace("IMG", '');
+        ind = this.name.replace("IMG", '');
+        brightnessSlider.value = 0;
+        contrastSlider.value = 0;
+        brightnessValue.innerText = 0;
+        contrastValue.innerText = 0;
         if(file.type.includes("image/")) {
             this.setText(file.name);
             var buttonText = this.getText();
             var reader = new FileReader();
             reader.onload = function () {
+                var contents = reader.result;
+                //alert(contents);
+                painted = false;
 
                 var img = new Image();
+                img.src = contents;
                 img.onload = function() {
-                    var canvas = document.createElement( "canvas" );
+                    var canvas = document.getElementById('canvas');
                     var scale = 1;
-                    if ( img.height > 800 ) {
-                        scale = 800.0 / img.height;
+                    if ( img.height > 128 ) {
+                        scale = 128.0 / img.height;
                     }
                     canvas.width = img.width * scale;
                     canvas.height = img.height * scale;
                     var ctx = canvas.getContext( "2d" );
                     ctx.scale( scale, scale );
+                    ctx.clearRect(0, 0, 178, 128);
                     ctx.drawImage( img, 0, 0 );
-                    var dataURL = canvas.toDataURL( "image/png" );
-                    localStorage.setItem( "customBackground", dataURL.replace( /^data:image\/(png|jpg);base64,/, "" ) );
-                    var dataImage = localStorage.getItem( 'customBackground' );
-                    var image = new Image();
-                    image.src = "data:image/png;base64," + dataImage;
-                };
-                img.src = reader.result;
+                    console.log(canvas.width+" "+canvas.height);
+                    var imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                    var data = imageData.data;
+                    for (var i = 0; i < data.length; i += 4) {
+                        var avg = (data[i] + data[i + 1] + data[i + 2]) / 3;
+                        data[i]     = avg; // red
+                        data[i + 1] = avg; // green
+                        data[i + 2] = avg; // blue
+                    }
+                    ctx.putImageData(imageData, 0, 0);
+                    if(!painted) {
+                        grayscaleImg = imageData;
+                    }
+                    painted = true;
+                    $("#basicModal").modal();
 
-
-                var contents = reader.result;
-                //alert(contents);
-                var container = Blockly.Workspace.getByContainer("bricklyDiv");
-                if (container) {
-                    var blocks = Blockly.Workspace.getByContainer("bricklyDiv").getAllBlocks();
-                    for (var x = 0; x < blocks.length; x++) {
-                        var func = blocks[x].getAsset;
-                        if (func) {
-                            blocks[x].setFieldValue(contents.toString(), "IMG_DATA" + ind);
+                    var container = Blockly.Workspace.getByContainer("bricklyDiv");
+                    if (container) {
+                        var blocks = Blockly.Workspace.getByContainer("bricklyDiv").getAllBlocks();
+                        for (var x = 0; x < blocks.length; x++) {
+                            var func = blocks[x].getAsset;
+                            if (func) {
+                                var func2 = blocks[x].setImageDataIndex;
+                                func2.call(blocks[x], ind);
+                                blocks[x].setFieldValue('', "IMG_DATA" + ind);
+                                console.log("GOING TO SET: "+ind);
+                               // blocks[x].setFieldValue(canvas.toDataURL(), "IMG_DATA" + ind);
+                            }
                         }
                     }
-                }
+                    //ctx.clearRect(0, 0, 178, 128);
+                };
             };
         }
         reader.readAsDataURL(file);
